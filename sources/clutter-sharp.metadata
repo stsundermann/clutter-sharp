@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<metadata>
+    <!-- These are opaque types, fields are supposed to be accessed using the methods -->
+    <attr path="//boxed[@name='Point' or @name='Vertex' or @name='Color' or @name='Rect' or @name='Size']" name="opaque">true</attr>
+    <!-- This is AtkImplementor in gtk# -->    
+    <attr path="//interface[@cname='AtkImplementorIface']" name="cname">AtkImplementor</attr>
+    <attr path="//return-type[@type='const GSList*']" name="type">GSList*</attr>
+    <attr path="//object[@name='Box']//virtual_method[starts-with(@name, 'ClutterPadding')]" name="hidden">true</attr>
+    <attr path="//union[@name='Event']" name="cname">ClutterEvent</attr>
+    <!-- ClutterStage fixes -->
+    <attr path="/api/namespace/object[@cname='ClutterStage']/signal[@name='Fullscreen']" name="name">FullscreenEvent</attr>
+    <!-- These are duplicates -->
+    <attr path="/api/namespace/struct/method[@cname='clutter_paint_node_ref']" name="hidden">true</attr>
+    <attr path="/api/namespace/struct/method[@cname='clutter_paint_node_unref']" name="hidden">true</attr>
+    <!-- These don't have a max fixed length -->
+    <remove-attr path="//method[@cname='clutter_actor_box_from_vertices']/parameters/parameter" name="array_len"/>
+    <attr path="//method[@cname='clutter_actor_get_abs_allocation_vertices']" name="hidden">true</attr>
+    <attr path="//method[@cname='clutter_actor_get_allocation_vertices']" name="hidden">true</attr>
+    <!-- Cairo.FontOptions (IntPtr) is inaccessable -->
+    <remove-node path="/api/namespace/object[@cname='ClutterBackend']/method[@name='GetFontOptions']"/>
+    <remove-node path="/api/namespace/object[@cname='ClutterBackend']/method[@name='SetFontOptions']"/>
+    <!-- Some broken methods -->
+    <attr path="//method[@cname='clutter_init']" name="hidden">true</attr>
+    <!-- Remove overloads -->
+    <remove-attr path="//method[@cname='clutter_actor_apply_relative_transform_to_point']/parameters/parameter" name="allow-none"/>
+    <remove-attr path="//method[@cname='clutter_units_from_em_for_font']/parameters/parameter" name="allow-none"/>
+</metadata>
