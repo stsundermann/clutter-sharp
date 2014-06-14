@@ -816,6 +816,13 @@
           </parameter>
         </parameters>
       </method>
+      <method name="ChildNotify" cname="clutter_container_child_notify">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="child" type="ClutterActor*"/>
+          <parameter name="pspec" type="GParamSpec*"/>
+        </parameters>
+      </method>
       <method name="ChildSetProperty" cname="clutter_container_child_set_property">
         <return-type type="void"/>
         <parameters>
@@ -904,12 +911,13 @@
           <parameter name="actor" type="ClutterActor*"/>
         </parameters>
       </signal>
-      <signal name="ChildNotify" cname="child-notify" when="first" field_name="child_notify">
+      <signal name="ChildNotifyEvent" cname="child-notify" when="first" field_name="child_notify">
         <return-type type="void"/>
         <parameters>
           <parameter name="actor" type="ClutterActor*"/>
           <parameter name="pspec" type="GParamSpec*"/>
         </parameters>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
     </interface>
     <interface name="Content" cname="ClutterContent" opaque="true" hidden="false">
@@ -1497,6 +1505,10 @@
           <parameter allow-none="1" name="text" type="const-gchar*"/>
         </parameters>
       </method>
+      <method name="Destroy" cname="clutter_actor_destroy">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
       <method name="DestroyAllChildren" cname="clutter_actor_destroy_all_children">
         <return-type type="void"/>
         <parameters/>
@@ -1504,6 +1516,13 @@
       <method name="DetachAnimation" cname="clutter_actor_detach_animation" deprecated="true">
         <return-type type="void"/>
         <parameters/>
+      </method>
+      <method name="Event" cname="clutter_actor_event">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="event" type="ClutterEvent*"/>
+          <parameter name="capture" type="gboolean"/>
+        </parameters>
       </method>
       <method name="GetAbsAllocationVertices" cname="clutter_actor_get_abs_allocation_vertices">
         <return-type type="void"/>
@@ -2010,6 +2029,10 @@
         <return-type type="gboolean"/>
         <parameters/>
       </method>
+      <method name="Hide" cname="clutter_actor_hide">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
       <method name="HideAll" cname="clutter_actor_hide_all" deprecated="true">
         <return-type type="void"/>
         <parameters/>
@@ -2087,11 +2110,19 @@
           <parameter name="orientation" type="ClutterOrientation"/>
         </parameters>
       </method>
+      <method name="Paint" cname="clutter_actor_paint">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
       <method name="PopInternal" cname="clutter_actor_pop_internal" deprecated="true">
         <return-type type="void"/>
         <parameters/>
       </method>
       <method name="PushInternal" cname="clutter_actor_push_internal" deprecated="true">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
+      <method name="QueueRedraw" cname="clutter_actor_queue_redraw">
         <return-type type="void"/>
         <parameters/>
       </method>
@@ -2103,6 +2134,10 @@
           </parameter>
         </parameters>
       </method>
+      <method name="QueueRelayout" cname="clutter_actor_queue_relayout">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
       <method name="Raise" cname="clutter_actor_raise" deprecated="true">
         <return-type type="void"/>
         <parameters>
@@ -2110,6 +2145,10 @@
         </parameters>
       </method>
       <method name="RaiseTop" cname="clutter_actor_raise_top" deprecated="true">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
+      <method name="Realize" cname="clutter_actor_realize" deprecated="true">
         <return-type type="void"/>
         <parameters/>
       </method>
@@ -2597,6 +2636,10 @@
         <return-type type="gboolean"/>
         <parameters/>
       </method>
+      <method name="Show" cname="clutter_actor_show">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
       <method name="ShowAll" cname="clutter_actor_show_all" deprecated="true">
         <return-type type="void"/>
         <parameters/>
@@ -2615,6 +2658,10 @@
         <parameters/>
       </method>
       <method name="Unparent" cname="clutter_actor_unparent" deprecated="true">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
+      <method name="Unrealize" cname="clutter_actor_unrealize" deprecated="true">
         <return-type type="void"/>
         <parameters/>
       </method>
@@ -2741,9 +2788,10 @@
           <parameter name="event" type="ClutterEvent*"/>
         </parameters>
       </signal>
-      <signal name="Destroy" cname="destroy" when="cleanup" field_name="destroy">
+      <signal name="DestroyEvent" cname="destroy" when="cleanup" field_name="destroy">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="EnterEvent" cname="enter-event" when="last" field_name="enter_event">
         <return-type type="gboolean"/>
@@ -2753,15 +2801,17 @@
           </parameter>
         </parameters>
       </signal>
-      <signal name="Event" cname="event" when="last" field_name="event">
+      <signal name="EventEvent" cname="event" when="last" field_name="event">
         <return-type type="gboolean"/>
         <parameters>
           <parameter name="event" type="ClutterEvent*"/>
         </parameters>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
-      <signal name="Hide" cname="hide" when="first" field_name="hide">
+      <signal name="HideEvent" cname="hide" when="first" field_name="hide">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="KeyFocusIn" cname="key-focus-in" when="last" field_name="key_focus_in">
         <return-type type="void"/>
@@ -2803,9 +2853,10 @@
           </parameter>
         </parameters>
       </signal>
-      <signal name="Paint" cname="paint" when="last" field_name="paint">
+      <signal name="PaintEvent" cname="paint" when="last" field_name="paint">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="ParentSet" cname="parent-set" when="last" field_name="parent_set">
         <return-type type="void"/>
@@ -2821,19 +2872,22 @@
           </parameter>
         </parameters>
       </signal>
-      <signal name="QueueRedraw" cname="queue-redraw" when="last" field_name="queue_redraw">
+      <signal name="QueueRedrawEvent" cname="queue-redraw" when="last" field_name="queue_redraw">
         <return-type type="void"/>
         <parameters>
           <parameter name="origin" type="ClutterActor*"/>
         </parameters>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
-      <signal name="QueueRelayout" cname="queue-relayout" when="last" field_name="queue_relayout">
+      <signal name="QueueRelayoutEvent" cname="queue-relayout" when="last" field_name="queue_relayout">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
-      <signal name="Realize" cname="realize" when="last" field_name="realize">
+      <signal name="RealizeEvent" cname="realize" when="last" field_name="realize">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="ScrollEvent" cname="scroll-event" when="last" field_name="scroll_event">
         <return-type type="gboolean"/>
@@ -2843,9 +2897,10 @@
           </parameter>
         </parameters>
       </signal>
-      <signal name="Show" cname="show" when="first" field_name="show">
+      <signal name="ShowEvent" cname="show" when="first" field_name="show">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="TouchEvent" cname="touch-event" when="last" field_name="touch_event">
         <return-type type="gboolean"/>
@@ -2864,9 +2919,10 @@
         <return-type type="void"/>
         <parameters/>
       </signal>
-      <signal name="Unrealize" cname="unrealize" when="last" field_name="unrealize">
+      <signal name="UnrealizeEvent" cname="unrealize" when="last" field_name="unrealize">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
     </object>
     <object name="ActorMeta" cname="ClutterActorMeta" defaultconstructoraccess="protected" opaque="false" hidden="false" parent="GInitiallyUnowned">
@@ -3157,6 +3213,10 @@
           <parameter name="interval" type="ClutterInterval*" owned="true"/>
         </parameters>
       </method>
+      <method name="Completed" cname="clutter_animation_completed" deprecated="true">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
       <method name="GetAlpha" cname="clutter_animation_get_alpha" deprecated="true">
         <return-type type="ClutterAlpha*"/>
         <parameters/>
@@ -3261,9 +3321,10 @@
       <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="ClutterAnimationPrivate*">
         <warning>missing glib:type-name</warning>
       </field>
-      <signal name="Completed" cname="completed" when="last" field_name="completed">
+      <signal name="CompletedEvent" cname="completed" when="last" field_name="completed">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="Started" cname="started" when="last" field_name="started">
         <return-type type="void"/>
@@ -6509,6 +6570,10 @@
           <parameter allow-none="1" name="nat_width_p" type="gfloat*" owned="true" pass_as="out"/>
         </parameters>
       </method>
+      <method name="LayoutChanged" cname="clutter_layout_manager_layout_changed">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
       <method name="ListChildProperties" cname="clutter_layout_manager_list_child_properties">
         <return-type type="GParamSpec***" owned="true" array="true" array_length_param_index="0"/>
         <parameters>
@@ -6523,9 +6588,10 @@
       </method>
       <field cname="parent_instance" access="private" writeable="false" readable="false" name="ParentInstance" type="GInitiallyUnowned*"/>
       <field cname="dummy" access="private" writeable="false" readable="false" name="Dummy" type="gpointer"/>
-      <signal name="LayoutChanged" cname="layout-changed" when="last" field_name="layout_changed">
+      <signal name="LayoutChangedEvent" cname="layout-changed" when="last" field_name="layout_changed">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
     </object>
     <object name="LayoutMeta" cname="ClutterLayoutMeta" defaultconstructoraccess="protected" opaque="false" hidden="false" parent="ClutterChildMeta">
@@ -9116,6 +9182,10 @@
           <parameter name="text" type="const-gchar*"/>
         </parameters>
       </constructor>
+      <method name="Activate" cname="clutter_text_activate">
+        <return-type type="gboolean"/>
+        <parameters/>
+      </method>
       <method name="CoordsToPosition" cname="clutter_text_coords_to_position">
         <return-type type="gint"/>
         <parameters>
@@ -9132,6 +9202,13 @@
       <method name="DeleteSelection" cname="clutter_text_delete_selection">
         <return-type type="gboolean"/>
         <parameters/>
+      </method>
+      <method name="DeleteText" cname="clutter_text_delete_text">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="start_pos" type="gssize"/>
+          <parameter name="end_pos" type="gssize"/>
+        </parameters>
       </method>
       <method name="GetActivatable" cname="clutter_text_get_activatable">
         <return-type type="gboolean"/>
@@ -9282,6 +9359,13 @@
       <method name="GetUseMarkup" cname="clutter_text_get_use_markup">
         <return-type type="gboolean"/>
         <parameters/>
+      </method>
+      <method name="InsertText" cname="clutter_text_insert_text">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="text" type="const-gchar*"/>
+          <parameter name="position" type="gssize"/>
+        </parameters>
       </method>
       <method name="InsertUnichar" cname="clutter_text_insert_unichar">
         <return-type type="void"/>
@@ -9516,9 +9600,10 @@
       <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="ClutterTextPrivate*">
         <warning>missing glib:type-name</warning>
       </field>
-      <signal name="Activate" cname="activate" when="last" field_name="activate">
+      <signal name="ActivateEvent" cname="activate" when="last" field_name="activate">
         <return-type type="void"/>
         <parameters/>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="CursorChanged" cname="cursor-changed" when="last" field_name="cursor_changed">
         <return-type type="void"/>
@@ -9532,20 +9617,22 @@
           </parameter>
         </parameters>
       </signal>
-      <signal name="DeleteText" cname="delete-text" when="last">
+      <signal name="DeleteTextEvent" cname="delete-text" when="last">
         <return-type type="void"/>
         <parameters>
           <parameter name="start_pos" type="gint"/>
           <parameter name="end_pos" type="gint"/>
         </parameters>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
-      <signal name="InsertText" cname="insert-text" when="last">
+      <signal name="InsertTextEvent" cname="insert-text" when="last">
         <return-type type="void"/>
         <parameters>
           <parameter name="new_text" type="const-gchar*"/>
           <parameter name="new_text_length" type="gint"/>
           <parameter name="position" type="gpointer"/>
         </parameters>
+        <warning>Signal renamed because of existing method with same name</warning>
       </signal>
       <signal name="TextChanged" cname="text-changed" when="last" field_name="text_changed">
         <return-type type="void"/>
@@ -10812,7 +10899,7 @@
       <method name="FromVertices" cname="clutter_actor_box_from_vertices">
         <return-type type="void"/>
         <parameters>
-          <parameter name="verts" type="ClutterVertex" array="true"/>
+          <parameter name="verts" type="ClutterVertex" array="true" array_len="4"/>
         </parameters>
       </method>
       <method name="GetArea" cname="clutter_actor_box_get_area">

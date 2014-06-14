@@ -6,7 +6,7 @@
     <attr path="//interface[@cname='AtkImplementorIface']" name="cname">AtkImplementor</attr>
     <attr path="//return-type[@type='const GSList*']" name="type">GSList*</attr>
     <attr path="//object[@name='Box']//virtual_method[starts-with(@name, 'ClutterPadding')]" name="hidden">true</attr>
-    <attr path="//union[@name='Event']" name="cname">ClutterEvent</attr>
+    <attr path="//struct[@name='Event']" name="cname">ClutterEvent</attr>
     <!-- ClutterStage fixes -->
     <attr path="/api/namespace/object[@cname='ClutterStage']/signal[@name='Fullscreen']" name="name">FullscreenEvent</attr>
     <!-- These are duplicates -->
@@ -24,4 +24,49 @@
     <!-- Remove overloads -->
     <remove-attr path="//method[@cname='clutter_actor_apply_relative_transform_to_point']/parameters/parameter" name="allow-none"/>
     <remove-attr path="//method[@cname='clutter_units_from_em_for_font']/parameters/parameter" name="allow-none"/>
+    <!-- Introspection fails -->
+    <remove-attr path="//method[@cname='clutter_stage_get_color']/parameters/parameter[@pass_as]"/>
+    <!-- Event system fixes -->
+    <change-node-type path="//union[@name='Event']">struct</change-node-type>
+    <attr path="//struct[contains(@name, 'Event') and not (@name='Event')]" name="parent">ClutterEvent</attr>
+    <attr path="//struct[contains(@name, 'Event') and not (@name='Event')]//field[@name='Flags' or @name='Type' or @name='Stage' or @name='Source' or @name='Time' or @name='Device']" name="hidden">true</attr>
+    <attr path="//struct[contains(@name, 'Event')]" name="opaque">true</attr>
+    <!-- Rename some events -->
+    <attr path="//signal[@name='EnterEvent']" name="name">Entered</attr>
+    <attr path="//signal[@name='DestroyEvent']" name="name">Destroyed</attr>
+    <attr path="//signal[@name='HiddenEvent']" name="name">Hidden</attr>
+    <attr path="//signal[@name='EventEvent']" name="name">Event</attr>
+    <attr path="//signal[@name='PaintEvent']" name="name">Painted</attr>
+    <attr path="//signal[@name='Pick']" name="name">Picked</attr>
+    <attr path="//signal[@name='QueueRedrawEvent']" name="name">RedrawQueued</attr>
+    <attr path="//signal[@name='QueueRelayoutEvent']" name="name">RelayoutQueued</attr>
+    <attr path="//signal[@name='RealizeEvent']" name="name">Realized</attr>
+    <attr path="//signal[@name='ShowEvent']" name="name">Shown</attr>
+    <attr path="//signal[@name='UnrealizeEvent']" name="name">Unrealized</attr>
+    <attr path="//signal[@name='ChildNotifyEvent']" name="name">ChildNotified</attr>
+    <attr path="//signal[@name='CompletedEvent']" name="name">Completed</attr>
+    <attr path="//signal[@name='LayoutChangedEvent']" name="name">LayoutChanged</attr>
+    <attr path="//signal[@name='DeleteTextEvent']" name="name">TextDeleted</attr>
+    <attr path="//signal[@name='ActivatedEvent']" name="name">Activated</attr>
+    <attr path="//signal[@name='InsertTextEvent']" name="name">TextInserted</attr>
+    <attr path="//object[@name='Actor']/property[@name='Realized']" name="name">IsRealized</attr>
+    <attr path="//method[@cname='clutter_animation_completed']" name="name">EmitCompleted</attr>
+    <attr path="//method[@cname='clutter_layout_manager_layout_changed']" name="name">EmitLayoutChanged</attr>
+    <attr path="//method[@cname='clutter_actor_event']" name="name">Emit</attr>
+    
+    <!-- API improvements -->
+    <add-node path="/api/namespace[@name='Clutter']"><class name="Application" cname="ClutterApplication" disable_void_ctor="1"></class></add-node>
+    <move-node path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_main') or starts-with(@cname, 'clutter_base')]">/api/namespace/class[@name='Application']</move-node>
+    <add-node path="/api/namespace[@name='Clutter']"><class name="Threads" cname="ClutterThreads" disable_void_ctor="1"></class></add-node>
+    <move-node path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_threads')]">/api/namespace/class[@name='Threads']</move-node>
+    <add-node path="/api/namespace[@name='Clutter']"><class name="Matrix" cname="ClutterMatrix" disable_void_ctor="1"></class></add-node>
+    <move-node path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_matrix')]">/api/namespace/class[@name='Matrix']</move-node>
+    <add-node path="/api/namespace[@name='Clutter']"><class name="Value" cname="ClutterValue" disable_void_ctor="1"></class></add-node>
+    <move-node path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_value')]">/api/namespace/class[@name='Value']</move-node>
+    <add-node path="/api/namespace[@name='Clutter']"><class name="Util" cname="ClutterUtil" disable_void_ctor="1"></class></add-node>
+    <move-node path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_util')]">/api/namespace/class[@name='Util']</move-node>
+    <!-- Remove duplicates from Global class -->
+    <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_units')]" name="hidden">true</attr>
+    <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_color')]" name="hidden">true</attr>
+    <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_event')]" name="hidden">true</attr>
 </metadata>

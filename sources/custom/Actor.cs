@@ -33,7 +33,7 @@ namespace Clutter {
 		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
 		static extern void clutter_actor_get_abs_allocation_vertices(IntPtr raw, out IntPtr[] verts);
 
-		public Clutter.Vertex[] AbsAllocationVertices { 
+		/*public Clutter.Vertex[] AbsAllocationVertices { 
 			get {
 				Clutter.Vertex[] verts = new Clutter.Vertex[4];
 				IntPtr[] native_verts = new IntPtr[4];
@@ -56,6 +56,6 @@ namespace Clutter {
 				verts [i] = new Clutter.Vertex (native_verts [i]);
 			}
 			return verts;
-		}
+		}*/
 	}
 }
