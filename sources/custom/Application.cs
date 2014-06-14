@@ -31,7 +31,7 @@ using System.Runtime.InteropServices;
 
 namespace Clutter {
 
-	public partial class Global {
+	public partial class Application {
 
 		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
 		static extern int clutter_init(ref int argc, IntPtr argv);
@@ -39,8 +39,9 @@ namespace Clutter {
 		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
 		static extern int clutter_init(IntPtr argc, IntPtr argv);
 
-		public static Clutter.InitError Init(ref int argc, string[] argv) {
+		public static Clutter.InitError Init(string[] argv) {
 			IntPtr native_argv = GLib.Marshaller.StringArrayToNullTermStrvPointer (argv);
+			int argc = argv.Length;
 			int raw_ret = clutter_init(ref argc, native_argv);
 			Clutter.InitError ret = (Clutter.InitError) raw_ret;
 			return ret;
