@@ -37,8 +37,10 @@
     <attr path="//struct[contains(@name, 'Event')]" name="opaque">true</attr>
     <!-- Rename some events -->
     <attr path="//signal[@name='EnterEvent']" name="name">Entered</attr>
+    <attr path="//signal[@name='ScrollEvent']" name="name">Scrolled</attr>
+    <attr path="//signal[@name='TouchEvent']" name="name">Touched</attr>
     <attr path="//signal[@name='DestroyEvent']" name="name">Destroyed</attr>
-    <attr path="//signal[@name='HiddenEvent']" name="name">Hidden</attr>
+    <attr path="//signal[@name='HideEvent']" name="name">Hidden</attr>
     <attr path="//signal[@name='EventEvent']" name="name">Event</attr>
     <attr path="//signal[@name='PaintEvent']" name="name">Painted</attr>
     <attr path="//signal[@name='Pick']" name="name">Picked</attr>
@@ -46,13 +48,39 @@
     <attr path="//signal[@name='QueueRelayoutEvent']" name="name">RelayoutQueued</attr>
     <attr path="//signal[@name='RealizeEvent']" name="name">Realized</attr>
     <attr path="//signal[@name='ShowEvent']" name="name">Shown</attr>
+    <attr path="//signal[@name='Draw']" name="name">Drawn</attr>
     <attr path="//signal[@name='UnrealizeEvent']" name="name">Unrealized</attr>
+    <attr path="//signal[@name='ButtonPressEvent']" name="name">ButtonPressed</attr>
+    <attr path="//signal[@name='CapturedEvent']" name="name">Captured</attr>
+    <attr path="//signal[@name='KeyReleaseEvent']" name="name">KeyReleased</attr>
+    <attr path="//signal[@name='KeyPressEvent']" name="name">KeyPressed</attr>
+    <attr path="//signal[@name='LongPress']" name="name">PressedLong</attr>
+    <attr path="//signal[@name='ButtonReleaseEvent']" name="name">ButtonReleased</attr>
     <attr path="//signal[@name='ChildNotifyEvent']" name="name">ChildNotified</attr>
     <attr path="//signal[@name='CompletedEvent']" name="name">Completed</attr>
     <attr path="//signal[@name='LayoutChangedEvent']" name="name">LayoutChanged</attr>
     <attr path="//signal[@name='DeleteTextEvent']" name="name">TextDeleted</attr>
-    <attr path="//signal[@name='ActivatedEvent']" name="name">Activated</attr>
+    <attr path="//signal[@name='ActivateEvent']" name="name">Activated</attr>
     <attr path="//signal[@name='InsertTextEvent']" name="name">TextInserted</attr>
+    <attr path="//signal[@name='MotionEvent']" name="name">Motion</attr>
+    <attr path="//signal[@name='DragBegin']" name="name">DragBegun</attr>
+    <attr path="//signal[@name='DragEnd']" name="name">DragEnded</attr>
+    <attr path="//signal[@name='Drop']" name="name">Dropped</attr>
+    <attr path="//signal[@name='DropCancel']" name="name">DropCanceled</attr>
+    <attr path="//signal[@name='GestureCancel']" name="name">GestureCanceled</attr>
+    <attr path="//signal[@name='GestureBegin']" name="name">GestureBegun</attr>
+    <attr path="//signal[@name='GestureEnd']" name="name">GestureEnded</attr>
+    <attr path="//signal[@name='Rotate']" name="name">Rotated</attr>
+    <attr path="//signal[@name='Activate']" name="name">Activated</attr>
+    <attr path="//signal[@name='Deactivate']" name="name">Deactivated</attr>
+    <attr path="//signal[@name='DeleteEvent']" name="name">Deleted</attr>
+    <attr path="//signal[@name='Swipe']" name="name">Swiped</attr>
+    <attr path="//signal[@name='Tap']" name="name">Tapped</attr>
+    <attr path="//signal[@name='CursorEvent']" name="name">Cursor</attr>
+    <attr path="//signal[@name='PixbufChange']" name="name">PixbufChanged</attr>
+    <attr path="//signal[@name='SizeChange']" name="name">SizeChanged</attr>
+    <attr path="//signal[@name='CreateSurface']" name="name">SurfaceCreated</attr>
+    <attr path="//signal[@name='Zoom']" name="name">Zoomed</attr>
     <attr path="//object[@name='Actor']/property[@name='Realized']" name="name">IsRealized</attr>
     <attr path="//method[@cname='clutter_animation_completed']" name="name">EmitCompleted</attr>
     <attr path="//method[@cname='clutter_layout_manager_layout_changed']" name="name">EmitLayoutChanged</attr>
