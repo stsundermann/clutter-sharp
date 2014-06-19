@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <metadata>
     <!-- These are opaque types, fields are supposed to be accessed using the methods -->
-    <attr path="//boxed[@name='Point' or @name='Vertex' or @name='Color' or @name='Rect' or @name='Size']" name="opaque">true</attr>
+    <attr path="//boxed[@name='Point' or @name='Vertex' or @name='Color' or @name='Rect' or @name='Size']//constructor[contains(@cname, 'alloc')]" name="hidden">true</attr>
+    <attr path="//boxed//method[@name='Equal']" name="name">Equals</attr>
+    <attr path="//boxed[method[@name='Equals']]" name="noequals">true</attr>
+    <attr path="//method[@cname='clutter_color_equal']//parameters/parameter" name="type">ClutterColor*</attr>
+    <attr path="//boxed//method[@cname='clutter_point_zero' or @cname='clutter_rect_zero']" name="name">Empty</attr>
     <!-- This is AtkImplementor in gtk# -->    
     <attr path="//interface[@cname='AtkImplementorIface']" name="cname">AtkImplementor</attr>
     <attr path="//return-type[@type='const GSList*']" name="type">GSList*</attr>

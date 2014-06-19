@@ -31,31 +31,23 @@ using System.Runtime.InteropServices;
 namespace Clutter {
 		partial class Actor {
 		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
-		static extern void clutter_actor_get_abs_allocation_vertices(IntPtr raw, out IntPtr[] verts);
+		static extern void clutter_actor_get_abs_allocation_vertices(IntPtr raw, Clutter.Vertex[] verts);
 
-		/*public Clutter.Vertex[] AbsAllocationVertices { 
+		public Clutter.Vertex[] AbsAllocationVertices { 
 			get {
 				Clutter.Vertex[] verts = new Clutter.Vertex[4];
-				IntPtr[] native_verts = new IntPtr[4];
-				clutter_actor_get_abs_allocation_vertices(Handle, out native_verts);
-				for (int i = 0; i < native_verts.Length; i++) {
-					verts [i] = new Clutter.Vertex (native_verts [i]);
-				}
+				clutter_actor_get_abs_allocation_vertices(Handle, verts);
 				return verts;
 			}
 		}
 
 		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
-		static extern void clutter_actor_get_allocation_vertices(IntPtr raw, IntPtr ancestor, out IntPtr[] verts);
+		static extern void clutter_actor_get_allocation_vertices(IntPtr raw, IntPtr ancestor, Clutter.Vertex[] verts);
 
 		public Clutter.Vertex[] GetAllocationVertices(Clutter.Actor ancestor) {
 			Clutter.Vertex[] verts = new Clutter.Vertex[4];
-			IntPtr[] native_verts = new IntPtr[4];
-			clutter_actor_get_allocation_vertices(Handle, ancestor == null ? IntPtr.Zero : ancestor.Handle, out native_verts);
-			for (int i = 0; i < native_verts.Length; i++) {
-				verts [i] = new Clutter.Vertex (native_verts [i]);
-			}
+			clutter_actor_get_allocation_vertices(Handle, ancestor == null ? IntPtr.Zero : ancestor.Handle, verts);
 			return verts;
-		}*/
+		}
 	}
 }
