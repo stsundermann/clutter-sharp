@@ -1,4 +1,4 @@
-TARGETS = basic-actor.exe canvas.exe
+TARGETS = basic-actor.exe canvas.exe pan-action.exe
 
 DEBUGS = $(addsuffix .mdb, $(TARGETS))
 assemblies = 					\
@@ -15,6 +15,11 @@ basic-actor.exe: $(srcdir)/BasicActor.cs $(assemblies)
 canvas.exe: $(srcdir)/Canvas.cs $(assemblies)
 	$(CSC) $(CSFLAGS) -out:canvas.exe $(references) $(GTK_SHARP_LIBS) $(srcdir)/Canvas.cs
 
+pan-action.exe: $(srcdir)/PanAction.cs $(assemblies)
+	$(CSC) $(CSFLAGS) -out:pan-action.exe $(references) $(GTK_SHARP_LIBS) $(COGLSHARP_LIBS) $(srcdir)/PanAction.cs
+
 EXTRA_DIST = 				\
 	BasicActor.cs \
-    Canvas.cs
+    Canvas.cs \
+    PanAction.cs \
+    redhand.png
