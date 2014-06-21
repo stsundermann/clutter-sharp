@@ -1,4 +1,4 @@
-SUBDIRS = sources sources/glue doc
+SUBDIRS = sources sources/glue doc samples
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = clutter-sharp-1.0.pc

@@ -153,6 +153,7 @@ AC_CONFIG_FILES([
 	sources/Makefile
 	sources/glue/Makefile
 	sources/AssemblyInfo.cs
+    samples/Makefile
 	clutter-sharp-1.0.pc
 	doc/Makefile
 ])
