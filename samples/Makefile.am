@@ -1,4 +1,4 @@
-TARGETS = basic-actor.exe
+TARGETS = basic-actor.exe canvas.exe
 
 DEBUGS = $(addsuffix .mdb, $(TARGETS))
 assemblies = 					\
@@ -10,7 +10,11 @@ noinst_SCRIPTS = $(TARGETS)
 CLEANFILES = $(TARGETS) $(DEBUGS)
 
 basic-actor.exe: $(srcdir)/BasicActor.cs $(assemblies)
-	$(CSC) $(CSFLAGS) -out:basic-actor.exe $(references) $(GTK_SHARP_LIBS) $(CLUTTERSHARP_LIBS) $(srcdir)/BasicActor.cs
+	$(CSC) $(CSFLAGS) -out:basic-actor.exe $(references) $(GTK_SHARP_LIBS) $(srcdir)/BasicActor.cs
+
+canvas.exe: $(srcdir)/Canvas.cs $(assemblies)
+	$(CSC) $(CSFLAGS) -out:canvas.exe $(references) $(GTK_SHARP_LIBS) $(srcdir)/Canvas.cs
 
 EXTRA_DIST = 				\
-	BasicActor.cs
+	BasicActor.cs \
+    Canvas.cs
