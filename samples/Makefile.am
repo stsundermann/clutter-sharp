@@ -1,4 +1,4 @@
-TARGETS = basic-actor.exe canvas.exe pan-action.exe rounded-rectangle.exe
+TARGETS = basic-actor.exe canvas.exe pan-action.exe rounded-rectangle.exe scroll-actor.exe
 
 DEBUGS = $(addsuffix .mdb, $(TARGETS))
 assemblies = 					\
@@ -21,9 +21,13 @@ pan-action.exe: $(srcdir)/PanAction.cs $(assemblies)
 rounded-rectangle.exe: $(srcdir)/RoundedRectangle.cs $(assemblies)
 	$(CSC) $(CSFLAGS) -out:rounded-rectangle.exe $(references) $(GTK_SHARP_LIBS) $(srcdir)/RoundedRectangle.cs
 
+scroll-actor.exe: $(srcdir)/ScrollActor.cs $(assemblies)
+	$(CSC) $(CSFLAGS) -out:scroll-actor.exe $(references) $(GTK_SHARP_LIBS) $(srcdir)/ScrollActor.cs
+
 EXTRA_DIST = 				\
 	BasicActor.cs \
     Canvas.cs \
     PanAction.cs \
     RoundedRectangle \
+    ScrollActor \
     redhand.png
