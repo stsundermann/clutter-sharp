@@ -1,4 +1,4 @@
-TARGETS = basic-actor.exe canvas.exe pan-action.exe rounded-rectangle.exe scroll-actor.exe image-content.exe
+TARGETS = basic-actor.exe canvas.exe pan-action.exe rounded-rectangle.exe scroll-actor.exe image-content.exe constraints.exe
 
 DEBUGS = $(addsuffix .mdb, $(TARGETS))
 assemblies = 					\
@@ -27,6 +27,9 @@ scroll-actor.exe: $(srcdir)/ScrollActor.cs $(assemblies)
 image-content.exe: $(srcdir)/ImageContent.cs $(assemblies)
 	$(CSC) $(CSFLAGS) -out:image-content.exe $(references) $(GTK_SHARP_LIBS) $(COGLSHARP_LIBS) $(srcdir)/ImageContent.cs
 
+constraints.exe: $(srcdir)/Constraints.cs $(assemblies)
+	$(CSC) $(CSFLAGS) -out:constraints.exe $(references) $(GTK_SHARP_LIBS) $(srcdir)/Constraints.cs
+
 EXTRA_DIST = 				\
 	BasicActor.cs \
     Canvas.cs \
@@ -34,4 +37,5 @@ EXTRA_DIST = 				\
     RoundedRectangle.cs \
     ScrollActor.cs \
     ImageContent.cs \
+    Constraints.cs \
     redhand.png
