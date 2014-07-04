@@ -1,4 +1,4 @@
-TARGETS = basic-actor.exe canvas.exe pan-action.exe rounded-rectangle.exe scroll-actor.exe image-content.exe constraints.exe gtk-window-test.exe
+TARGETS = basic-actor.exe canvas.exe pan-action.exe rounded-rectangle.exe scroll-actor.exe image-content.exe constraints.exe gtk-window-test.exe video-sink.exe
 
 DEBUGS = $(addsuffix .mdb, $(TARGETS))
 assemblies = 					\
@@ -33,6 +33,9 @@ constraints.exe: $(srcdir)/Constraints.cs $(assemblies)
 gtk-window-test.exe: $(srcdir)/GtkWindowTest.cs $(assemblies)
 	$(CSC) $(CSFLAGS) -out:gtk-window-test.exe $(references) $(GTK_SHARP_LIBS) $(srcdir)/GtkWindowTest.cs
 
+video-sink.exe: $(srcdir)/VideoSink.cs $(assemblies)
+	$(CSC) $(CSFLAGS) -out:video.sink.exe $(references) $(GTK_SHARP_LIBS) $(GSTREAMERSHARP_LIBS) $(srcdir)/VideoSink.cs
+
 EXTRA_DIST = 				\
 	BasicActor.cs \
     Canvas.cs \
@@ -42,4 +45,5 @@ EXTRA_DIST = 				\
     ImageContent.cs \
     Constraints.cs \
     GtkWindowTest.cs \
+    VideoSink.cs \
     redhand.png
