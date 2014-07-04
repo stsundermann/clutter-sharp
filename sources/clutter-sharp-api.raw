@@ -1258,6 +1258,35 @@
         <method signal_vm="touch_event"/>
         <field cname="_padding_dummy" access="private" writeable="false" readable="false" name="_paddingPaddingDummy" type="gpointer" array="true" array_len="26"/>
       </class_struct>
+      <class_struct cname="GtkClutterActorClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="_clutter_gtk_reserved1"/>
+        <method vm="_clutter_gtk_reserved2"/>
+        <method vm="_clutter_gtk_reserved3"/>
+        <method vm="_clutter_gtk_reserved4"/>
+        <method vm="_clutter_gtk_reserved5"/>
+        <method vm="_clutter_gtk_reserved6"/>
+      </class_struct>
+      <virtual_method name="_clutterClutterGtkReserved1" cname="_clutter_gtk_reserved1" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved2" cname="_clutter_gtk_reserved2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved3" cname="_clutter_gtk_reserved3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved4" cname="_clutter_gtk_reserved4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved5" cname="_clutter_gtk_reserved5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved6" cname="_clutter_gtk_reserved6" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
       <method name="GetType" cname="clutter_actor_get_type" shared="true">
         <return-type type="GType"/>
       </method>
@@ -9849,6 +9878,11 @@
       <virtual_method name="_clutterClutterTexture5" cname="_clutter_texture5" shared="true" hidden="true">
         <return-type type="void"/>
       </virtual_method>
+      <class_struct cname="GtkClutterTextureClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterTextureClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+      </class_struct>
       <method name="GetType" cname="clutter_texture_get_type" shared="true">
         <return-type type="GType"/>
       </method>
@@ -17254,6 +17288,1134 @@
       <constant value="16785536" ctype="gint" gtype="gint" name="zerosubscript"/>
       <constant value="16785520" ctype="gint" gtype="gint" name="zerosuperior"/>
       <constant value="16777654" ctype="gint" gtype="gint" name="zstroke"/>
+    </object>
+  </namespace>
+  <namespace name="GtkClutter" library="clutter-gtk-1.0">
+    <enum name="TextureError" cname="GtkClutterTextureError" type="enum">
+      <member cname="GTK_CLUTTER_TEXTURE_ERROR_INVALID_STOCK_ID" name="TextureErrorInvalidStockId" value="0"/>
+    </enum>
+    <object name="Actor" cname="GtkClutterActor" opaque="false" hidden="false" parent="ClutterActor">
+      <implements>
+        <interface cname="AtkImplementorIface"/>
+        <interface cname="ClutterAnimatable"/>
+        <interface cname="ClutterContainer"/>
+        <interface cname="ClutterScriptable"/>
+      </implements>
+      <class_struct cname="ClutterActorClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="GInitiallyUnownedClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="show"/>
+        <method vm="show_all"/>
+        <method vm="hide"/>
+        <method vm="hide_all"/>
+        <method vm="realize"/>
+        <method vm="unrealize"/>
+        <method vm="map"/>
+        <method vm="unmap"/>
+        <method vm="paint"/>
+        <method vm="parent_set"/>
+        <method vm="destroy"/>
+        <method vm="pick"/>
+        <method vm="queue_redraw"/>
+        <method vm="get_preferred_width"/>
+        <method vm="get_preferred_height"/>
+        <method vm="allocate"/>
+        <method vm="apply_transform"/>
+        <method vm="event"/>
+        <method vm="button_press_event"/>
+        <method vm="button_release_event"/>
+        <method vm="scroll_event"/>
+        <method vm="key_press_event"/>
+        <method vm="key_release_event"/>
+        <method vm="motion_event"/>
+        <method vm="enter_event"/>
+        <method vm="leave_event"/>
+        <method vm="captured_event"/>
+        <method vm="key_focus_in"/>
+        <method vm="key_focus_out"/>
+        <method vm="queue_relayout"/>
+        <method vm="get_accessible"/>
+        <method vm="get_paint_volume"/>
+        <method vm="has_overlaps"/>
+        <method vm="paint_node"/>
+        <method vm="touch_event"/>
+        <field cname="_padding_dummy" access="private" writeable="false" readable="false" name="_paddingPaddingDummy" type="gpointer" array="true" array_len="26"/>
+      </class_struct>
+      <virtual_method name="Show" cname="show" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ShowAll" cname="show_all" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Hide" cname="hide" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="HideAll" cname="hide_all" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Realize" cname="realize" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Unrealize" cname="unrealize" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Map" cname="map" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Unmap" cname="unmap" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Paint" cname="paint" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ParentSet" cname="parent_set" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="old_parent" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Destroy" cname="destroy" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Pick" cname="pick" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="color" type="ClutterColor*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="QueueRedraw" cname="queue_redraw" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="leaf_that_queued" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetPreferredWidth" cname="get_preferred_width" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+          <parameter name="for_height" type="gfloat"/>
+          <parameter allow-none="1" name="min_width_p" type="gfloat*" owned="true" pass_as="out"/>
+          <parameter allow-none="1" name="natural_width_p" type="gfloat*" owned="true" pass_as="out"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetPreferredHeight" cname="get_preferred_height" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+          <parameter name="for_width" type="gfloat"/>
+          <parameter allow-none="1" name="min_height_p" type="gfloat*" owned="true" pass_as="out"/>
+          <parameter allow-none="1" name="natural_height_p" type="gfloat*" owned="true" pass_as="out"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Allocate" cname="allocate" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+          <parameter name="box" type="ClutterActorBox*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+          <parameter name="flags" type="ClutterAllocationFlags"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ApplyTransform" cname="apply_transform" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="matrix" type="CoglMatrix"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Event" cname="event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterEvent*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ButtonPressEvent" cname="button_press_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterButtonEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ButtonReleaseEvent" cname="button_release_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterButtonEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ScrollEvent" cname="scroll_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterScrollEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="KeyPressEvent" cname="key_press_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterKeyEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="KeyReleaseEvent" cname="key_release_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterKeyEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="MotionEvent" cname="motion_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterMotionEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="EnterEvent" cname="enter_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterCrossingEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="LeaveEvent" cname="leave_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterCrossingEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="CapturedEvent" cname="captured_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterEvent*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="KeyFocusIn" cname="key_focus_in" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="KeyFocusOut" cname="key_focus_out" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="QueueRelayout" cname="queue_relayout" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetAccessible" cname="get_accessible" shared="true">
+        <return-type type="AtkObject*"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetPaintVolume" cname="get_paint_volume" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="actor" type="ClutterActor*"/>
+          <parameter name="volume" type="ClutterPaintVolume*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="HasOverlaps" cname="has_overlaps" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="PaintNode" cname="paint_node" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+          <parameter name="root" type="ClutterPaintNode*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="TouchEvent" cname="touch_event" shared="true">
+        <return-type type="gboolean"/>
+        <parameters>
+          <parameter name="self" type="ClutterActor*"/>
+          <parameter name="event" type="ClutterTouchEvent*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <class_struct cname="GtkClutterActorClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="_clutter_gtk_reserved1"/>
+        <method vm="_clutter_gtk_reserved2"/>
+        <method vm="_clutter_gtk_reserved3"/>
+        <method vm="_clutter_gtk_reserved4"/>
+        <method vm="_clutter_gtk_reserved5"/>
+        <method vm="_clutter_gtk_reserved6"/>
+      </class_struct>
+      <virtual_method name="_clutterClutterGtkReserved1" cname="_clutter_gtk_reserved1" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved2" cname="_clutter_gtk_reserved2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved3" cname="_clutter_gtk_reserved3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved4" cname="_clutter_gtk_reserved4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved5" cname="_clutter_gtk_reserved5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved6" cname="_clutter_gtk_reserved6" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <method name="GetType" cname="gtk_clutter_actor_get_type" shared="true">
+        <return-type type="GType"/>
+      </method>
+      <constructor cname="gtk_clutter_actor_new" disable_void_ctor=""/>
+      <constructor cname="gtk_clutter_actor_new_with_contents">
+        <parameters>
+          <parameter name="contents" type="GtkWidget*"/>
+        </parameters>
+      </constructor>
+      <method name="GetContents" cname="gtk_clutter_actor_get_contents">
+        <return-type type="GtkWidget*"/>
+        <parameters/>
+      </method>
+      <method name="GetWidget" cname="gtk_clutter_actor_get_widget">
+        <return-type type="GtkWidget*"/>
+        <parameters/>
+      </method>
+      <property name="Contents" cname="contents" type="GtkWidget*" readable="true" writeable="true" construct="true" construct-only="false"/>
+      <field cname="parent_instance" access="private" writeable="false" readable="false" name="ParentInstance" type="ClutterActor*"/>
+      <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="GtkClutterActorPrivate*">
+        <warning>missing glib:type-name</warning>
+      </field>
+    </object>
+    <object name="Embed" cname="GtkClutterEmbed" opaque="false" hidden="false" parent="GtkContainer">
+      <implements>
+        <interface cname="AtkImplementorIface"/>
+        <interface cname="GtkBuildable"/>
+      </implements>
+      <class_struct cname="GtkClutterEmbedClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="GtkContainerClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="_clutter_gtk_reserved1"/>
+        <method vm="_clutter_gtk_reserved2"/>
+        <method vm="_clutter_gtk_reserved3"/>
+        <method vm="_clutter_gtk_reserved4"/>
+        <method vm="_clutter_gtk_reserved5"/>
+        <method vm="_clutter_gtk_reserved6"/>
+      </class_struct>
+      <virtual_method name="_clutterClutterGtkReserved1" cname="_clutter_gtk_reserved1" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved2" cname="_clutter_gtk_reserved2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved3" cname="_clutter_gtk_reserved3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved4" cname="_clutter_gtk_reserved4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved5" cname="_clutter_gtk_reserved5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved6" cname="_clutter_gtk_reserved6" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <method name="GetType" cname="gtk_clutter_embed_get_type" shared="true">
+        <return-type type="GType"/>
+      </method>
+      <constructor cname="gtk_clutter_embed_new" disable_void_ctor=""/>
+      <method name="GetStage" cname="gtk_clutter_embed_get_stage">
+        <return-type type="ClutterActor*"/>
+        <parameters/>
+      </method>
+      <method name="GetUseLayoutSize" cname="gtk_clutter_embed_get_use_layout_size">
+        <return-type type="gboolean"/>
+        <parameters/>
+      </method>
+      <method name="SetUseLayoutSize" cname="gtk_clutter_embed_set_use_layout_size">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="use_layout_size" type="gboolean"/>
+        </parameters>
+      </method>
+      <property name="UseLayoutSize" cname="use-layout-size" type="gboolean" readable="true" writeable="true" construct="true" construct-only="false"/>
+      <field cname="parent_instance" access="private" writeable="false" readable="false" name="ParentInstance" type="GtkContainer*"/>
+      <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="GtkClutterEmbedPrivate*">
+        <warning>missing glib:type-name</warning>
+      </field>
+    </object>
+    <object name="Texture" cname="GtkClutterTexture" opaque="false" hidden="false" parent="ClutterTexture">
+      <implements>
+        <interface cname="AtkImplementorIface"/>
+        <interface cname="ClutterAnimatable"/>
+        <interface cname="ClutterContainer"/>
+        <interface cname="ClutterScriptable"/>
+      </implements>
+      <class_struct cname="ClutterTextureClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="size_change"/>
+        <method vm="pixbuf_change"/>
+        <method vm="load_finished"/>
+        <method vm="_clutter_texture1"/>
+        <method vm="_clutter_texture2"/>
+        <method vm="_clutter_texture3"/>
+        <method vm="_clutter_texture4"/>
+        <method vm="_clutter_texture5"/>
+      </class_struct>
+      <virtual_method name="SizeChange" cname="size_change" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="texture" type="ClutterTexture*"/>
+          <parameter name="width" type="gint"/>
+          <parameter name="height" type="gint"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="PixbufChange" cname="pixbuf_change" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="texture" type="ClutterTexture*"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="LoadFinished" cname="load_finished" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="texture" type="ClutterTexture*"/>
+          <parameter name="error" type="GError*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="_clutterClutterTexture1" cname="_clutter_texture1" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterTexture2" cname="_clutter_texture2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterTexture3" cname="_clutter_texture3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterTexture4" cname="_clutter_texture4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterTexture5" cname="_clutter_texture5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <class_struct cname="GtkClutterTextureClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterTextureClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+      </class_struct>
+      <method name="GetType" cname="gtk_clutter_texture_get_type" shared="true">
+        <return-type type="GType"/>
+      </method>
+      <constructor cname="gtk_clutter_texture_new" disable_void_ctor=""/>
+      <method name="ErrorQuark" cname="gtk_clutter_texture_error_quark" shared="true">
+        <return-type type="guint32"/>
+      </method>
+      <method name="SetFromIconName" cname="gtk_clutter_texture_set_from_icon_name">
+        <return-type type="gboolean"/>
+        <parameters throws="1">
+          <parameter allow-none="1" name="widget" type="GtkWidget*"/>
+          <parameter name="icon_name" type="const-gchar*"/>
+          <parameter name="icon_size" type="GtkIconSize"/>
+          <parameter name="error" type="GError**"/>
+        </parameters>
+      </method>
+      <method name="SetFromPixbuf" cname="gtk_clutter_texture_set_from_pixbuf">
+        <return-type type="gboolean"/>
+        <parameters throws="1">
+          <parameter name="pixbuf" type="GdkPixbuf.Pixbuf"/>
+          <parameter name="error" type="GError**"/>
+        </parameters>
+      </method>
+      <method name="SetFromStock" cname="gtk_clutter_texture_set_from_stock">
+        <return-type type="gboolean"/>
+        <parameters throws="1">
+          <parameter name="widget" type="GtkWidget*"/>
+          <parameter name="stock_id" type="const-gchar*"/>
+          <parameter name="icon_size" type="GtkIconSize"/>
+          <parameter name="error" type="GError**"/>
+        </parameters>
+      </method>
+      <field cname="parent_instance" access="private" writeable="false" readable="false" name="ParentInstance" type="ClutterTexture*"/>
+    </object>
+    <object name="Window" cname="GtkClutterWindow" opaque="false" hidden="false" parent="GtkWindow">
+      <implements>
+        <interface cname="AtkImplementorIface"/>
+        <interface cname="GtkBuildable"/>
+      </implements>
+      <class_struct cname="GtkClutterWindowClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="GtkWindowClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="_clutter_gtk_reserved1"/>
+        <method vm="_clutter_gtk_reserved2"/>
+        <method vm="_clutter_gtk_reserved3"/>
+        <method vm="_clutter_gtk_reserved4"/>
+        <method vm="_clutter_gtk_reserved5"/>
+        <method vm="_clutter_gtk_reserved6"/>
+      </class_struct>
+      <virtual_method name="_clutterClutterGtkReserved1" cname="_clutter_gtk_reserved1" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved2" cname="_clutter_gtk_reserved2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved3" cname="_clutter_gtk_reserved3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved4" cname="_clutter_gtk_reserved4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved5" cname="_clutter_gtk_reserved5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterGtkReserved6" cname="_clutter_gtk_reserved6" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <method name="GetType" cname="gtk_clutter_window_get_type" shared="true">
+        <return-type type="GType"/>
+      </method>
+      <constructor cname="gtk_clutter_window_new" disable_void_ctor=""/>
+      <method name="GetStage" cname="gtk_clutter_window_get_stage">
+        <return-type type="ClutterActor*"/>
+        <parameters/>
+      </method>
+      <field cname="parent_instance" access="private" writeable="false" readable="false" name="ParentInstance" type="GtkWindow*"/>
+      <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="GtkClutterWindowPrivate*">
+        <warning>missing glib:type-name</warning>
+      </field>
+    </object>
+    <struct name="ActorPrivate" cname="GtkClutterActorPrivate" opaque="true" hidden="true"/>
+    <struct name="EmbedPrivate" cname="GtkClutterEmbedPrivate" opaque="true" hidden="true"/>
+    <struct name="WindowPrivate" cname="GtkClutterWindowPrivate" opaque="true" hidden="true"/>
+    <object name="Global" cname="GtkClutterGlobal" opaque="true">
+      <method name="Init" cname="gtk_clutter_init" shared="true">
+        <return-type type="ClutterInitError" array_index="1"/>
+        <parameters>
+          <parameter allow-none="1" name="argc" type="gint*" owned="true" pass_as="ref" array_index="1"/>
+          <parameter allow-none="1" name="argv" type="char****" owned="true" pass_as="ref" array="true" array_length_param_index="0"/>
+        </parameters>
+      </method>
+      <method name="InitWithArgs" cname="gtk_clutter_init_with_args" shared="true">
+        <return-type type="ClutterInitError" array_index="1"/>
+        <parameters throws="1">
+          <parameter allow-none="1" name="argc" type="gint*" owned="true" pass_as="ref" array_index="1"/>
+          <parameter allow-none="1" name="argv" type="char****" owned="true" pass_as="ref" array="true" array_length_param_index="0"/>
+          <parameter allow-none="1" name="parameter_string" type="const-gchar*"/>
+          <parameter allow-none="1" name="entries" type="GOptionEntry*" array="true" null_term_array="true"/>
+          <parameter allow-none="1" name="translation_domain" type="const-gchar*"/>
+          <parameter name="error" type="GError**"/>
+        </parameters>
+      </method>
+    </object>
+    <object name="Constants" cname="GtkClutterConstants" opaque="true"/>
+  </namespace>
+  <namespace name="ClutterGst" library="clutter-gst-2.0">
+    <enum name="BufferingMode" cname="ClutterGstBufferingMode" type="enum" gtype="clutter_gst_buffering_mode_get_type">
+      <member cname="CLUTTER_GST_BUFFERING_MODE_STREAM" name="Stream" value="0"/>
+      <member cname="CLUTTER_GST_BUFFERING_MODE_DOWNLOAD" name="Download" value="1"/>
+    </enum>
+    <enum name="SeekFlags" cname="ClutterGstSeekFlags" type="flags" gtype="clutter_gst_seek_flags_get_type">
+      <member cname="CLUTTER_GST_SEEK_FLAG_NONE" name="None" value="0"/>
+      <member cname="CLUTTER_GST_SEEK_FLAG_ACCURATE" name="Accurate" value="1"/>
+    </enum>
+    <interface name="Player" cname="ClutterGstPlayer" opaque="true" hidden="false">
+      <class_struct cname="ClutterGstPlayerIface">
+        <field cname="base_iface" access="private" writeable="false" readable="false" name="BaseIface" type="GTypeInterface">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="ClutterGstPlayerIfacePrivate*">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="get_pipeline"/>
+        <method vm="get_user_agent"/>
+        <method vm="set_user_agent"/>
+        <method vm="get_seek_flags"/>
+        <method vm="set_seek_flags"/>
+        <method vm="get_buffering_mode"/>
+        <method vm="set_buffering_mode"/>
+        <method vm="get_audio_streams"/>
+        <method vm="get_audio_stream"/>
+        <method vm="set_audio_stream"/>
+        <method vm="get_subtitle_tracks"/>
+        <method vm="get_subtitle_track"/>
+        <method vm="set_subtitle_track"/>
+        <method vm="get_idle"/>
+        <method vm="get_in_seek"/>
+        <method vm="_iface_reserved16"/>
+        <method vm="_iface_reserved17"/>
+        <method vm="_iface_reserved18"/>
+        <method vm="_iface_reserved19"/>
+        <method vm="_iface_reserved20"/>
+        <method vm="_iface_reserved21"/>
+        <method vm="_iface_reserved22"/>
+        <method vm="_iface_reserved23"/>
+        <method vm="_iface_reserved24"/>
+        <method vm="_iface_reserved25"/>
+        <method vm="_iface_reserved26"/>
+        <method vm="_iface_reserved27"/>
+        <method vm="_iface_reserved28"/>
+        <method vm="_iface_reserved29"/>
+        <method vm="_iface_reserved30"/>
+        <method vm="_iface_reserved31"/>
+        <method vm="_iface_reserved32"/>
+        <method vm="_iface_reserved33"/>
+        <method vm="_iface_reserved34"/>
+        <method vm="_iface_reserved35"/>
+        <method signal_vm="download_buffering"/>
+        <method vm="_clutter_reserved2"/>
+        <method vm="_clutter_reserved3"/>
+        <method vm="_clutter_reserved4"/>
+        <method vm="_clutter_reserved5"/>
+        <method vm="_clutter_reserved6"/>
+        <method vm="_clutter_reserved7"/>
+        <method vm="_clutter_reserved8"/>
+        <method vm="_clutter_reserved9"/>
+        <method vm="_clutter_reserved10"/>
+      </class_struct>
+      <virtual_method name="_ifaceIfaceReserved16" cname="_iface_reserved16" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved17" cname="_iface_reserved17" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved18" cname="_iface_reserved18" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved19" cname="_iface_reserved19" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved20" cname="_iface_reserved20" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved21" cname="_iface_reserved21" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved22" cname="_iface_reserved22" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved23" cname="_iface_reserved23" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved24" cname="_iface_reserved24" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved25" cname="_iface_reserved25" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved26" cname="_iface_reserved26" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved27" cname="_iface_reserved27" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved28" cname="_iface_reserved28" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved29" cname="_iface_reserved29" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved30" cname="_iface_reserved30" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved31" cname="_iface_reserved31" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved32" cname="_iface_reserved32" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved33" cname="_iface_reserved33" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved34" cname="_iface_reserved34" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_ifaceIfaceReserved35" cname="_iface_reserved35" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved2" cname="_clutter_reserved2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved3" cname="_clutter_reserved3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved4" cname="_clutter_reserved4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved5" cname="_clutter_reserved5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved6" cname="_clutter_reserved6" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved7" cname="_clutter_reserved7" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved8" cname="_clutter_reserved8" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved9" cname="_clutter_reserved9" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved10" cname="_clutter_reserved10" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <method name="GetType" cname="clutter_gst_player_get_type" shared="true">
+        <return-type type="GType"/>
+      </method>
+      <method name="ClassInit" cname="clutter_gst_player_class_init" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="object_class" type="GObjectClass*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </method>
+      <virtual_method name="GetAudioStream" cname="get_audio_stream">
+        <return-type type="gint"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetAudioStreams" cname="get_audio_streams">
+        <return-type type="GList*" element_type="const-gchar*"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetBufferingMode" cname="get_buffering_mode">
+        <return-type type="ClutterGstBufferingMode"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetIdle" cname="get_idle">
+        <return-type type="gboolean"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetInSeek" cname="get_in_seek">
+        <return-type type="gboolean"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetPipeline" cname="get_pipeline">
+        <return-type type="GstElement*"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetSeekFlags" cname="get_seek_flags">
+        <return-type type="ClutterGstSeekFlags"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetSubtitleTrack" cname="get_subtitle_track">
+        <return-type type="gint"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetSubtitleTracks" cname="get_subtitle_tracks">
+        <return-type type="GList*" element_type="const-gchar*"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="GetUserAgent" cname="get_user_agent">
+        <return-type type="gchar*" owned="true"/>
+        <parameters/>
+      </virtual_method>
+      <virtual_method name="SetAudioStream" cname="set_audio_stream">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="index_" type="gint"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetBufferingMode" cname="set_buffering_mode">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="mode" type="ClutterGstBufferingMode"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetSeekFlags" cname="set_seek_flags">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="flags" type="ClutterGstSeekFlags"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetSubtitleTrack" cname="set_subtitle_track">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="index_" type="gint"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetUserAgent" cname="set_user_agent">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="user_agent" type="const-gchar*"/>
+        </parameters>
+      </virtual_method>
+      <method name="Deinit" cname="clutter_gst_player_deinit">
+        <return-type type="void"/>
+        <parameters/>
+      </method>
+      <method name="GetAudioStream" cname="clutter_gst_player_get_audio_stream">
+        <return-type type="gint"/>
+        <parameters/>
+      </method>
+      <method name="GetAudioStreams" cname="clutter_gst_player_get_audio_streams">
+        <return-type type="GList*" element_type="const-gchar*"/>
+        <parameters/>
+      </method>
+      <method name="GetBufferingMode" cname="clutter_gst_player_get_buffering_mode">
+        <return-type type="ClutterGstBufferingMode"/>
+        <parameters/>
+      </method>
+      <method name="GetIdle" cname="clutter_gst_player_get_idle">
+        <return-type type="gboolean"/>
+        <parameters/>
+      </method>
+      <method name="GetInSeek" cname="clutter_gst_player_get_in_seek">
+        <return-type type="gboolean"/>
+        <parameters/>
+      </method>
+      <method name="GetPipeline" cname="clutter_gst_player_get_pipeline">
+        <return-type type="GstElement*"/>
+        <parameters/>
+      </method>
+      <method name="GetSeekFlags" cname="clutter_gst_player_get_seek_flags">
+        <return-type type="ClutterGstSeekFlags"/>
+        <parameters/>
+      </method>
+      <method name="GetSubtitleTrack" cname="clutter_gst_player_get_subtitle_track">
+        <return-type type="gint"/>
+        <parameters/>
+      </method>
+      <method name="GetSubtitleTracks" cname="clutter_gst_player_get_subtitle_tracks">
+        <return-type type="GList*" element_type="const-gchar*"/>
+        <parameters/>
+      </method>
+      <method name="GetUserAgent" cname="clutter_gst_player_get_user_agent">
+        <return-type type="gchar*" owned="true"/>
+        <parameters/>
+      </method>
+      <method name="Init" cname="clutter_gst_player_init">
+        <return-type type="gboolean"/>
+        <parameters/>
+      </method>
+      <method name="SetAudioStream" cname="clutter_gst_player_set_audio_stream">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="index_" type="gint"/>
+        </parameters>
+      </method>
+      <method name="SetBufferingMode" cname="clutter_gst_player_set_buffering_mode">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="mode" type="ClutterGstBufferingMode"/>
+        </parameters>
+      </method>
+      <method name="SetSeekFlags" cname="clutter_gst_player_set_seek_flags">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="flags" type="ClutterGstSeekFlags"/>
+        </parameters>
+      </method>
+      <method name="SetSubtitleTrack" cname="clutter_gst_player_set_subtitle_track">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="index_" type="gint"/>
+        </parameters>
+      </method>
+      <method name="SetUserAgent" cname="clutter_gst_player_set_user_agent">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="user_agent" type="const-gchar*"/>
+        </parameters>
+      </method>
+      <property name="AudioStream" cname="audio-stream" type="gint" readable="true" writeable="true" construct="false" construct-only="false"/>
+      <property name="AudioStreams" cname="audio-streams" type="gpointer" readable="true" writeable="false" construct="false" construct-only="false"/>
+      <property name="Idle" cname="idle" type="gboolean" readable="true" writeable="false" construct="false" construct-only="false"/>
+      <property name="InSeek" cname="in-seek" type="gboolean" readable="true" writeable="false" construct="false" construct-only="false"/>
+      <property name="SeekFlags" cname="seek-flags" type="ClutterGstSeekFlags" readable="true" writeable="true" construct="false" construct-only="false"/>
+      <property name="SubtitleTrack" cname="subtitle-track" type="gint" readable="true" writeable="true" construct="false" construct-only="false"/>
+      <property name="SubtitleTracks" cname="subtitle-tracks" type="gpointer" readable="true" writeable="false" construct="false" construct-only="false"/>
+      <property name="UserAgent" cname="user-agent" type="gchar*" readable="true" writeable="true" construct="false" construct-only="false"/>
+      <signal name="DownloadBuffering" cname="download-buffering" when="last" field_name="download_buffering">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="start" type="gdouble"/>
+          <parameter name="stop" type="gdouble"/>
+        </parameters>
+      </signal>
+    </interface>
+    <object name="VideoSink" cname="ClutterGstVideoSink" opaque="false" hidden="false" parent="GstBaseSink">
+      <implements>
+        <interface cname="GstNavigation"/>
+      </implements>
+      <class_struct cname="ClutterGstVideoSinkClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="GstBaseSinkClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="_clutter_reserved1"/>
+        <method vm="_clutter_reserved2"/>
+        <method vm="_clutter_reserved3"/>
+        <method vm="_clutter_reserved4"/>
+        <method vm="_clutter_reserved5"/>
+        <method vm="_clutter_reserved6"/>
+      </class_struct>
+      <virtual_method name="_clutterClutterReserved1" cname="_clutter_reserved1" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved2" cname="_clutter_reserved2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved3" cname="_clutter_reserved3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved4" cname="_clutter_reserved4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved5" cname="_clutter_reserved5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved6" cname="_clutter_reserved6" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <method name="GetType" cname="clutter_gst_video_sink_get_type" shared="true">
+        <return-type type="GType"/>
+      </method>
+      <constructor cname="clutter_gst_video_sink_new">
+        <parameters>
+          <parameter name="texture" type="ClutterTexture*"/>
+        </parameters>
+      </constructor>
+      <property name="Texture" cname="texture" type="ClutterTexture*" readable="true" writeable="true" construct="false" construct-only="false"/>
+      <property name="UpdatePriority" cname="update-priority" type="gint" readable="true" writeable="true" construct="false" construct-only="false"/>
+      <field cname="parent" access="private" writeable="false" readable="false" name="Parent" type="GstBaseSink*"/>
+      <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="ClutterGstVideoSinkPrivate*">
+        <warning>missing glib:type-name</warning>
+      </field>
+    </object>
+    <object name="VideoTexture" cname="ClutterGstVideoTexture" opaque="false" hidden="false" parent="ClutterTexture">
+      <implements>
+        <interface cname="AtkImplementorIface"/>
+        <interface cname="ClutterAnimatable"/>
+        <interface cname="ClutterContainer"/>
+        <interface cname="ClutterMedia"/>
+        <interface cname="ClutterScriptable"/>
+        <interface cname="ClutterGstPlayer"/>
+      </implements>
+      <class_struct cname="ClutterGstVideoTextureClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterTextureClass">
+          <warning>missing glib:type-name</warning>
+        </field>
+        <method vm="_clutter_reserved1"/>
+        <method vm="_clutter_reserved2"/>
+        <method vm="_clutter_reserved3"/>
+        <method vm="_clutter_reserved4"/>
+        <method vm="_clutter_reserved5"/>
+        <method vm="_clutter_reserved6"/>
+      </class_struct>
+      <virtual_method name="_clutterClutterReserved1" cname="_clutter_reserved1" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved2" cname="_clutter_reserved2" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved3" cname="_clutter_reserved3" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved4" cname="_clutter_reserved4" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved5" cname="_clutter_reserved5" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <virtual_method name="_clutterClutterReserved6" cname="_clutter_reserved6" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
+      <method name="GetType" cname="clutter_gst_video_texture_get_type" shared="true">
+        <return-type type="GType"/>
+      </method>
+      <constructor cname="clutter_gst_video_texture_new" disable_void_ctor=""/>
+      <method name="GetAudioStream" cname="clutter_gst_video_texture_get_audio_stream">
+        <return-type type="gint"/>
+        <parameters/>
+      </method>
+      <method name="GetAudioStreams" cname="clutter_gst_video_texture_get_audio_streams">
+        <return-type type="GList*" element_type="GList*">
+          <warning>missing glib:type-name</warning>
+        </return-type>
+        <parameters/>
+      </method>
+      <method name="GetBufferingMode" cname="clutter_gst_video_texture_get_buffering_mode">
+        <return-type type="ClutterGstBufferingMode"/>
+        <parameters/>
+      </method>
+      <method name="GetIdleMaterial" cname="clutter_gst_video_texture_get_idle_material">
+        <return-type type="gpointer"/>
+        <parameters/>
+      </method>
+      <method name="GetPipeline" cname="clutter_gst_video_texture_get_pipeline">
+        <return-type type="GstElement*"/>
+        <parameters/>
+      </method>
+      <method name="GetSeekFlags" cname="clutter_gst_video_texture_get_seek_flags">
+        <return-type type="ClutterGstSeekFlags"/>
+        <parameters/>
+      </method>
+      <method name="GetSubtitleTrack" cname="clutter_gst_video_texture_get_subtitle_track">
+        <return-type type="gint"/>
+        <parameters/>
+      </method>
+      <method name="GetSubtitleTracks" cname="clutter_gst_video_texture_get_subtitle_tracks">
+        <return-type type="GList*" element_type="GList*">
+          <warning>missing glib:type-name</warning>
+        </return-type>
+        <parameters/>
+      </method>
+      <method name="GetUserAgent" cname="clutter_gst_video_texture_get_user_agent">
+        <return-type type="gchar*" owned="true"/>
+        <parameters/>
+      </method>
+      <method name="SetAudioStream" cname="clutter_gst_video_texture_set_audio_stream">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="index_" type="gint"/>
+        </parameters>
+      </method>
+      <method name="SetBufferingMode" cname="clutter_gst_video_texture_set_buffering_mode">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="mode" type="ClutterGstBufferingMode"/>
+        </parameters>
+      </method>
+      <method name="SetIdleMaterial" cname="clutter_gst_video_texture_set_idle_material">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="material" type="gpointer"/>
+        </parameters>
+      </method>
+      <method name="SetSeekFlags" cname="clutter_gst_video_texture_set_seek_flags">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="flags" type="ClutterGstSeekFlags"/>
+        </parameters>
+      </method>
+      <method name="SetSubtitleTrack" cname="clutter_gst_video_texture_set_subtitle_track">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="index_" type="gint"/>
+        </parameters>
+      </method>
+      <method name="SetUserAgent" cname="clutter_gst_video_texture_set_user_agent">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="user_agent" type="const-gchar*"/>
+        </parameters>
+      </method>
+      <property name="PixelAspectRatio" cname="pixel-aspect-ratio" type="*" readable="true" writeable="true" construct="false" construct-only="false"/>
+      <field cname="parent" access="private" writeable="false" readable="false" name="Parent" type="ClutterTexture*"/>
+      <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="ClutterGstVideoTexturePrivate*">
+        <warning>missing glib:type-name</warning>
+      </field>
+    </object>
+    <struct name="PlayerIfacePrivate" cname="ClutterGstPlayerIfacePrivate" opaque="true" hidden="true"/>
+    <struct name="VideoSinkPrivate" cname="ClutterGstVideoSinkPrivate" opaque="true" hidden="true"/>
+    <struct name="VideoTexturePrivate" cname="ClutterGstVideoTexturePrivate" opaque="true" hidden="true"/>
+    <object name="Global" cname="ClutterGstGlobal" opaque="true">
+      <method name="Init" cname="clutter_gst_init" shared="true">
+        <return-type type="ClutterInitError" array_index="1"/>
+        <parameters>
+          <parameter name="argc" type="gint*" owned="true" pass_as="ref" array_index="1"/>
+          <parameter allow-none="1" name="argv" type="char****" owned="true" pass_as="ref" array="true" array_length_param_index="0"/>
+        </parameters>
+      </method>
+      <method name="InitWithArgs" cname="clutter_gst_init_with_args" shared="true">
+        <return-type type="ClutterInitError" array_index="1"/>
+        <parameters throws="1">
+          <parameter name="argc" type="gint*" owned="true" pass_as="ref" array_index="1"/>
+          <parameter allow-none="1" name="argv" type="char****" owned="true" pass_as="ref" array="true" array_length_param_index="0"/>
+          <parameter name="parameter_string" type="const-gchar*"/>
+          <parameter name="entries" type="GOptionEntry*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+          <parameter name="translation_domain" type="const-gchar*"/>
+          <parameter name="error" type="GError**"/>
+        </parameters>
+      </method>
+      <method name="PlayerClassInit" cname="clutter_gst_player_class_init" shared="true">
+        <return-type type="void"/>
+        <parameters>
+          <parameter name="object_class" type="GObjectClass*">
+            <warning>missing glib:type-name</warning>
+          </parameter>
+        </parameters>
+      </method>
+    </object>
+    <object name="Constants" cname="ClutterGstConstants" opaque="true">
+      <constant value="2" ctype="gint" gtype="gint" name="MAJOR_VERSION"/>
+      <constant value="13" ctype="gint" gtype="gint" name="MICRO_VERSION"/>
+      <constant value="0" ctype="gint" gtype="gint" name="MINOR_VERSION"/>
+      <constant value="0" ctype="gint" gtype="gint" name="VERSION_HEX"/>
+      <constant value="2.0.13" ctype="gchar*" gtype="gchar*" name="VERSION_S"/>
     </object>
   </namespace>
 </api>

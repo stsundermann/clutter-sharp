@@ -1,5 +1,5 @@
 //
-// Fixes for Global
+// Fixes for Application
 //
 // Author:
 //   Stephan Sundermann <stephansundermann@gmail.com>
@@ -49,6 +49,54 @@ namespace Clutter {
 
 		public static Clutter.InitError Init () {
 			return (Clutter.InitError) clutter_init (IntPtr.Zero, IntPtr.Zero);
+		}
+	}
+}
+
+namespace ClutterGst {
+
+	public partial class Application {
+
+		[DllImport("clutter-gst-2.0", CallingConvention = CallingConvention.Cdecl)]
+		static extern int clutter_gst_init(ref int argc, IntPtr argv);
+
+		[DllImport("clutter-gst-2.0", CallingConvention = CallingConvention.Cdecl)]
+		static extern int clutter_gst_init(IntPtr argc, IntPtr argv);
+
+		public static Clutter.InitError Init(string[] argv) {
+			IntPtr native_argv = GLib.Marshaller.StringArrayToNullTermStrvPointer (argv);
+			int argc = argv.Length;
+			int raw_ret = clutter_gst_init(ref argc, native_argv);
+			Clutter.InitError ret = (Clutter.InitError) raw_ret;
+			return ret;
+		}
+
+		public static Clutter.InitError Init () {
+			return (Clutter.InitError) clutter_gst_init (IntPtr.Zero, IntPtr.Zero);
+		}
+	}
+}
+
+namespace ClutterGtk {
+
+	public partial class Application {
+
+		[DllImport("clutter-gtk-1.0", CallingConvention = CallingConvention.Cdecl)]
+		static extern int gtk_clutter_init(ref int argc, IntPtr argv);
+
+		[DllImport("clutter-gtk-1.0", CallingConvention = CallingConvention.Cdecl)]
+		static extern int gtk_clutter_init(IntPtr argc, IntPtr argv);
+
+		public static Clutter.InitError Init(string[] argv) {
+			IntPtr native_argv = GLib.Marshaller.StringArrayToNullTermStrvPointer (argv);
+			int argc = argv.Length;
+			int raw_ret = gtk_clutter_init(ref argc, native_argv);
+			Clutter.InitError ret = (Clutter.InitError) raw_ret;
+			return ret;
+		}
+
+		public static Clutter.InitError Init () {
+			return (Clutter.InitError) gtk_clutter_init (IntPtr.Zero, IntPtr.Zero);
 		}
 	}
 }

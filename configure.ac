@@ -139,6 +139,20 @@ AC_SUBST(clutter_prefix)
 AC_SUBST(CLUTTER_LIBS)
 AC_SUBST(CLUTTER_CFLAGS)
 
+dnl Check for ClutterGst
+PKG_CHECK_MODULES(CLUTTERGST, clutter-gst-2.0 >= 2.0.0)
+clutter_gst_prefix=/usr/local
+AC_SUBST(clutter_gst_prefix)
+AC_SUBST(CLUTTERGST_LIBS)
+AC_SUBST(CLUTTERGST_CFLAGS)
+
+dnl Check for GtkClutter
+PKG_CHECK_MODULES(CLUTTERGTK, clutter-gtk-1.0 >= 1.4)
+clutter_gtk_prefix=/usr/local
+AC_SUBST(clutter_gtk_prefix)
+AC_SUBST(CLUTTERGTK_LIBS)
+AC_SUBST(CLUTTERGTK_CFLAGS)
+
 dnl Check for cogl-sharp
 PKG_CHECK_MODULES(COGLSHARP, cogl-sharp-1.0)
 cogl_sharp_prefix=/usr/local
@@ -146,7 +160,12 @@ AC_SUBST(clutter_sharp_prefix)
 AC_SUBST(COGLSHARP_LIBS)
 AC_SUBST(COGLSHARP_CFLAGS)
 
-
+dnl Check for gstreamer-sharp
+PKG_CHECK_MODULES(GSTREAMERSHARP, gstreamer-sharp-1.0 >= 0.99.0)
+gstreamer_sharp_prefix=/usr/local
+AC_SUBST(gstreamer_sharp_prefix)
+AC_SUBST(GSTREAMERSHARP_LIBS)
+AC_SUBST(GSTREAMERSHARP_CFLAGS)
 
 AC_CONFIG_FILES([
 	Makefile

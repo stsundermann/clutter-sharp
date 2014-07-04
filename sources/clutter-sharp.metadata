@@ -127,4 +127,7 @@
     <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_units')]" name="hidden">true</attr>
     <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_color')]" name="hidden">true</attr>
     <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_event')]" name="hidden">true</attr>
+    <!-- ClutterGst fixes -->
+    <attr path="//interface[@name='Player']//property" name="hidden">true</attr>
+    <attr path="//namespace[@name='GtkClutter' or @name='ClutterGst']//object[@name='Global']" name="hidden">true</attr>
 </metadata>
