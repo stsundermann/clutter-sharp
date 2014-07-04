@@ -127,9 +127,10 @@
     <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_units')]" name="hidden">true</attr>
     <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_color')]" name="hidden">true</attr>
     <attr path="/api/namespace/object[@name='Global']//method[starts-with(@cname, 'clutter_event')]" name="hidden">true</attr>
-    <!-- ClutterGst fixes -->
+    <!-- ClutterGst and ClutterGtk fixes -->
     <attr path="//interface[@name='Player']//property" name="hidden">true</attr>
     <attr path="//namespace[@name='GtkClutter' or @name='ClutterGst']//object[@name='Global']" name="hidden">true</attr>
     <attr path="//namespace[@name='GtkClutter']" name="name">Clutter.GTK</attr>
     <attr path="//namespace[@name='ClutterGst']" name="name">Clutter.Gstreamer</attr>
+    <remove-node path="//interface[@cname='GtkBuildable']" />
 </metadata>
