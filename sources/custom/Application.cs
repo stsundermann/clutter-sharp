@@ -53,7 +53,7 @@ namespace Clutter {
 	}
 }
 
-namespace ClutterGst {
+namespace Clutter.Gstreamer {
 
 	public partial class Application {
 
@@ -77,7 +77,7 @@ namespace ClutterGst {
 	}
 }
 
-namespace ClutterGtk {
+namespace Clutter.GTK {
 
 	public partial class Application {
 
