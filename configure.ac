@@ -140,7 +140,7 @@ AC_SUBST(CLUTTER_LIBS)
 AC_SUBST(CLUTTER_CFLAGS)
 
 dnl Check for ClutterGst
-PKG_CHECK_MODULES(CLUTTERGST, clutter-gst-2.0 >= 2.0.0)
+PKG_CHECK_MODULES(CLUTTERGST, clutter-gst-3.0 >= 3.0.0)
 clutter_gst_prefix=/usr/local
 AC_SUBST(clutter_gst_prefix)
 AC_SUBST(CLUTTERGST_LIBS)
