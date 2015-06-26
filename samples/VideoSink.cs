@@ -13,7 +13,7 @@ namespace ClutterTest
 {
 	class MainClass
 	{
-		static void OnSizeChanged (object sender, SizeChangedArgs args)
+		static void OnSizeChanged (object sender, Clutter.SizeChangedArgs args)
 		{
 			var texture = (Texture)sender;
 			var stage = texture.Stage;
