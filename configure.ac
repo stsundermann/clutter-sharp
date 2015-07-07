@@ -1,4 +1,4 @@
-AC_INIT([clutter-sharp], [1.22.0])
+AC_INIT([clutter-sharp], [1.20.0])
 AC_CONFIG_SRCDIR([README])
 AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE
@@ -15,7 +15,7 @@ ASSEMBLY_NAMESPACE="Clutter"
 ASSEMBLY_PC="clutter-sharp-1.0"
 ASSEMBLY_SHORTNAME="clutter"
 ASSEMBLY_TITLE="Clutter#"
-ASSEMBLY_VERSION="1.22.0"
+ASSEMBLY_VERSION="1.20.0"
 AC_SUBST([ACLOCAL_AMFLAGS], ["-I m4 \${ACLOCAL_FLAGS}"])
 
 AC_SUBST(ASSEMBLY_NAME)
@@ -133,7 +133,7 @@ AC_SUBST(MONODOCER)
 
 AM_CONDITIONAL(ENABLE_MONODOC, test "x$enable_monodoc" = "xyes")
 dnl Check for Clutter
-PKG_CHECK_MODULES(CLUTTER, clutter-1.0 >= 1.18)
+PKG_CHECK_MODULES(CLUTTER, clutter-1.0 >= 1.20)
 clutter_prefix=/usr/local
 AC_SUBST(clutter_prefix)
 AC_SUBST(CLUTTER_LIBS)
@@ -147,7 +147,7 @@ AC_SUBST(CLUTTERGST_LIBS)
 AC_SUBST(CLUTTERGST_CFLAGS)
 
 dnl Check for GtkClutter
-PKG_CHECK_MODULES(CLUTTERGTK, clutter-gtk-1.0 >= 1.4)
+PKG_CHECK_MODULES(CLUTTERGTK, clutter-gtk-1.0 >= 1.5)
 clutter_gtk_prefix=/usr/local
 AC_SUBST(clutter_gtk_prefix)
 AC_SUBST(CLUTTERGTK_LIBS)
@@ -161,7 +161,7 @@ AC_SUBST(COGLSHARP_LIBS)
 AC_SUBST(COGLSHARP_CFLAGS)
 
 dnl Check for gstreamer-sharp
-PKG_CHECK_MODULES(GSTREAMERSHARP, gstreamer-sharp-1.0 >= 0.99.0)
+PKG_CHECK_MODULES(GSTREAMERSHARP, gstreamer-sharp-1.0 >= 1.39.1)
 gstreamer_sharp_prefix=/usr/local
 AC_SUBST(gstreamer_sharp_prefix)
 AC_SUBST(GSTREAMERSHARP_LIBS)

@@ -123,7 +123,7 @@
       <member cname="CLUTTER_GESTURE_TRIGGER_EDGE_AFTER" name="After" value="1"/>
       <member cname="CLUTTER_GESTURE_TRIGGER_EDGE_BEFORE" name="Before" value="2"/>
     </enum>
-    <enum name="Gravity" cname="ClutterGravity" type="enum" gtype="clutter_gravity_get_type" version="0.2" deprecated="true" deprecated-version="1.22">
+    <enum name="Gravity" cname="ClutterGravity" type="enum" gtype="clutter_gravity_get_type" version="0.2">
       <member cname="CLUTTER_GRAVITY_NONE" name="None" value="0"/>
       <member cname="CLUTTER_GRAVITY_NORTH" name="North" value="1"/>
       <member cname="CLUTTER_GRAVITY_NORTH_EAST" name="NorthEast" value="2"/>
@@ -180,7 +180,7 @@
       <member cname="CLUTTER_INPUT_MODE_SLAVE" name="Slave" value="1"/>
       <member cname="CLUTTER_INPUT_MODE_FLOATING" name="Floating" value="2"/>
     </enum>
-    <enum name="Interpolation" cname="ClutterInterpolation" type="enum" gtype="clutter_interpolation_get_type" version="1.2" deprecated="true" deprecated-version="1.22">
+    <enum name="Interpolation" cname="ClutterInterpolation" type="enum" gtype="clutter_interpolation_get_type" version="1.2">
       <member cname="CLUTTER_INTERPOLATION_LINEAR" name="Linear" value="0"/>
       <member cname="CLUTTER_INTERPOLATION_CUBIC" name="Cubic" value="1"/>
     </enum>
@@ -215,14 +215,13 @@
     <enum name="RequestMode" cname="ClutterRequestMode" type="enum" gtype="clutter_request_mode_get_type" version="0.8">
       <member cname="CLUTTER_REQUEST_HEIGHT_FOR_WIDTH" name="HeightForWidth" value="0"/>
       <member cname="CLUTTER_REQUEST_WIDTH_FOR_HEIGHT" name="WidthForHeight" value="1"/>
-      <member cname="CLUTTER_REQUEST_CONTENT_SIZE" name="ContentSize" value="2"/>
     </enum>
     <enum name="RotateAxis" cname="ClutterRotateAxis" type="enum" gtype="clutter_rotate_axis_get_type" version="0.4">
       <member cname="CLUTTER_X_AXIS" name="XAxis" value="0"/>
       <member cname="CLUTTER_Y_AXIS" name="YAxis" value="1"/>
       <member cname="CLUTTER_Z_AXIS" name="ZAxis" value="2"/>
     </enum>
-    <enum name="RotateDirection" cname="ClutterRotateDirection" type="enum" gtype="clutter_rotate_direction_get_type" version="0.4" deprecated="true" deprecated-version="1.22">
+    <enum name="RotateDirection" cname="ClutterRotateDirection" type="enum" gtype="clutter_rotate_direction_get_type" version="0.4">
       <member cname="CLUTTER_ROTATE_CW" name="Cw" value="0"/>
       <member cname="CLUTTER_ROTATE_CCW" name="Ccw" value="1"/>
     </enum>
@@ -309,7 +308,7 @@
       <member cname="CLUTTER_STEP_MODE_START" name="Start" value="0"/>
       <member cname="CLUTTER_STEP_MODE_END" name="End" value="1"/>
     </enum>
-    <enum name="TableAlignment" cname="ClutterTableAlignment" type="enum" gtype="clutter_table_alignment_get_type" version="1.4" deprecated="true" deprecated-version="1.22">
+    <enum name="TableAlignment" cname="ClutterTableAlignment" type="enum" gtype="clutter_table_alignment_get_type" version="1.4">
       <member cname="CLUTTER_TABLE_ALIGNMENT_START" name="Start" value="0"/>
       <member cname="CLUTTER_TABLE_ALIGNMENT_CENTER" name="Center" value="1"/>
       <member cname="CLUTTER_TABLE_ALIGNMENT_END" name="End" value="2"/>
@@ -324,7 +323,7 @@
       <member cname="CLUTTER_TEXTURE_ERROR_NO_YUV" name="NoYuv" value="1"/>
       <member cname="CLUTTER_TEXTURE_ERROR_BAD_FORMAT" name="BadFormat" value="2"/>
     </enum>
-    <enum name="TextureQuality" cname="ClutterTextureQuality" type="enum" gtype="clutter_texture_quality_get_type" version="0.8" deprecated="true" deprecated-version="1.22">
+    <enum name="TextureQuality" cname="ClutterTextureQuality" type="enum" gtype="clutter_texture_quality_get_type" version="0.8">
       <member cname="CLUTTER_TEXTURE_QUALITY_LOW" name="Low" value="0"/>
       <member cname="CLUTTER_TEXTURE_QUALITY_MEDIUM" name="Medium" value="1"/>
       <member cname="CLUTTER_TEXTURE_QUALITY_HIGH" name="High" value="2"/>
@@ -383,7 +382,7 @@
       <member cname="CLUTTER_FEATURE_STAGE_MULTIPLE" name="StageMultiple" value="2048"/>
       <member cname="CLUTTER_FEATURE_SWAP_EVENTS" name="SwapEvents" value="4096"/>
     </enum>
-    <enum name="FontFlags" cname="ClutterFontFlags" type="flags" gtype="clutter_font_flags_get_type" version="1.0" deprecated="true" deprecated-version="1.22">
+    <enum name="FontFlags" cname="ClutterFontFlags" type="flags" gtype="clutter_font_flags_get_type" version="1.0">
       <member cname="CLUTTER_FONT_MIPMAPPING" name="Mipmapping" value="1"/>
       <member cname="CLUTTER_FONT_HINTING" name="Hinting" value="2"/>
     </enum>
@@ -447,13 +446,13 @@
       <member cname="CLUTTER_SWIPE_DIRECTION_LEFT" name="Left" value="4"/>
       <member cname="CLUTTER_SWIPE_DIRECTION_RIGHT" name="Right" value="8"/>
     </enum>
-    <enum name="TextureFlags" cname="ClutterTextureFlags" type="flags" gtype="clutter_texture_flags_get_type" version="0.4" deprecated="true" deprecated-version="1.22">
+    <enum name="TextureFlags" cname="ClutterTextureFlags" type="flags" gtype="clutter_texture_flags_get_type" version="0.4">
       <member cname="CLUTTER_TEXTURE_NONE" name="None" value="0"/>
       <member cname="CLUTTER_TEXTURE_RGB_FLAG_BGR" name="RgbFlagBgr" value="2"/>
       <member cname="CLUTTER_TEXTURE_RGB_FLAG_PREMULT" name="RgbFlagPremult" value="4"/>
       <member cname="CLUTTER_TEXTURE_YUV_FLAG_YUV2" name="YuvFlagYuv2" value="8"/>
     </enum>
-    <callback name="AlphaFunc" cname="ClutterAlphaFunc" version="0.2" deprecated="true" deprecated-version="1.12">
+    <callback name="AlphaFunc" cname="ClutterAlphaFunc" version="0.2">
       <return-type type="gdouble"/>
       <parameters>
         <parameter name="alpha" type="ClutterAlpha*"/>
@@ -1797,7 +1796,7 @@
         <return-type type="guint8"/>
         <parameters/>
       </method>
-      <method name="GetPaintVisibility" cname="clutter_actor_get_paint_visibility" version="0.8">
+      <method name="GetPaintVisibility" cname="clutter_actor_get_paint_visibility" version="0.8.4">
         <return-type type="gboolean"/>
         <parameters/>
       </method>
@@ -2022,7 +2021,7 @@
         <return-type type="gboolean"/>
         <parameters/>
       </method>
-      <method name="HasClip" cname="clutter_actor_has_clip" version="0.2">
+      <method name="HasClip" cname="clutter_actor_has_clip" version="0.1.1">
         <return-type type="gboolean"/>
         <parameters/>
       </method>
@@ -2674,7 +2673,7 @@
         <return-type type="void"/>
         <parameters/>
       </method>
-      <method name="Unparent" cname="clutter_actor_unparent" version="0.2" deprecated="true" deprecated-version="1.10">
+      <method name="Unparent" cname="clutter_actor_unparent" version="0.1.1" deprecated="true" deprecated-version="1.10">
         <return-type type="void"/>
         <parameters/>
       </method>
@@ -3064,11 +3063,11 @@
       <property name="Factor" cname="factor" type="gfloat" readable="true" writeable="true" construct="true" construct-only="false" version="1.4"/>
       <property name="Source" cname="source" type="ClutterActor*" readable="true" writeable="true" construct="true" construct-only="false" version="1.4"/>
     </object>
-    <object name="Alpha" cname="ClutterAlpha" opaque="false" hidden="false" parent="GInitiallyUnowned" version="0.2" deprecated="true" deprecated-version="1.12">
+    <object name="Alpha" cname="ClutterAlpha" opaque="false" hidden="false" parent="GInitiallyUnowned" version="0.2">
       <implements>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterAlphaClass" version="0.2" deprecated="true" deprecated-version="1.12">
+      <class_struct cname="ClutterAlphaClass" version="0.2">
         <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="GInitiallyUnownedClass">
           <warning>missing glib:type-name</warning>
         </field>
@@ -3167,11 +3166,11 @@
         <warning>missing glib:type-name</warning>
       </field>
     </object>
-    <object name="Animation" cname="ClutterAnimation" opaque="false" hidden="false" parent="GObject" version="1.0" deprecated="true" deprecated-version="1.12">
+    <object name="Animation" cname="ClutterAnimation" opaque="false" hidden="false" parent="GObject" version="1.0">
       <implements>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterAnimationClass" version="1.0" deprecated="true" deprecated-version="1.12">
+      <class_struct cname="ClutterAnimationClass" version="1.0">
         <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="GObjectClass">
           <warning>missing glib:type-name</warning>
         </field>
@@ -4342,8 +4341,8 @@
           <parameter name="manager" type="ClutterLayoutManager*"/>
         </parameters>
       </method>
-      <property name="Color" cname="color" type="ClutterColor*" readable="true" writeable="true" construct="false" construct-only="false" version="1.2" deprecated="true" deprecated-version="1.10"/>
-      <property name="ColorSet" cname="color-set" type="gboolean" readable="true" writeable="true" construct="false" construct-only="false" version="1.2" deprecated="true" deprecated-version="1.10"/>
+      <property name="Color" cname="color" type="ClutterColor*" readable="true" writeable="true" construct="false" construct-only="false" version="1.2"/>
+      <property name="ColorSet" cname="color-set" type="gboolean" readable="true" writeable="true" construct="false" construct-only="false" version="1.2"/>
       <field cname="parent_instance" access="private" writeable="false" readable="false" name="ParentInstance" type="ClutterActor*"/>
       <field cname="priv" access="private" writeable="false" readable="false" name="Priv" type="ClutterBoxPrivate*">
         <warning>missing glib:type-name</warning>
@@ -4939,7 +4938,6 @@
           <warning>missing glib:type-name</warning>
         </field>
         <method vm="update_allocation"/>
-        <method vm="update_preferred_size"/>
         <method vm="_clutter_constraint1"/>
         <method vm="_clutter_constraint2"/>
         <method vm="_clutter_constraint3"/>
@@ -4947,6 +4945,7 @@
         <method vm="_clutter_constraint5"/>
         <method vm="_clutter_constraint6"/>
         <method vm="_clutter_constraint7"/>
+        <method vm="_clutter_constraint8"/>
       </class_struct>
       <virtual_method name="_clutterClutterConstraint1" cname="_clutter_constraint1" shared="true" hidden="true">
         <return-type type="void"/>
@@ -4969,6 +4968,9 @@
       <virtual_method name="_clutterClutterConstraint7" cname="_clutter_constraint7" shared="true" hidden="true">
         <return-type type="void"/>
       </virtual_method>
+      <virtual_method name="_clutterClutterConstraint8" cname="_clutter_constraint8" shared="true" hidden="true">
+        <return-type type="void"/>
+      </virtual_method>
       <method name="GetType" cname="clutter_constraint_get_type" shared="true">
         <return-type type="GType"/>
       </method>
@@ -4979,16 +4981,6 @@
           <parameter name="allocation" type="ClutterActorBox*">
             <warning>missing glib:type-name</warning>
           </parameter>
-        </parameters>
-      </virtual_method>
-      <virtual_method name="UpdatePreferredSize" cname="update_preferred_size">
-        <return-type type="void"/>
-        <parameters>
-          <parameter name="actor" type="ClutterActor*"/>
-          <parameter name="direction" type="ClutterOrientation"/>
-          <parameter name="for_size" type="gfloat"/>
-          <parameter name="minimum_size" type="gfloat"/>
-          <parameter name="natural_size" type="gfloat"/>
         </parameters>
       </virtual_method>
       <field cname="parent_instance" access="private" writeable="false" readable="false" name="ParentInstance" type="ClutterActorMeta*"/>
@@ -5894,14 +5886,14 @@
         <warning>missing glib:type-name</warning>
       </field>
     </object>
-    <object name="Group" cname="ClutterGroup" opaque="false" hidden="false" parent="ClutterActor" version="0.2">
+    <object name="Group" cname="ClutterGroup" opaque="false" hidden="false" parent="ClutterActor" version="0.1">
       <implements>
         <interface cname="AtkImplementorIface"/>
         <interface cname="ClutterAnimatable"/>
         <interface cname="ClutterContainer"/>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterGroupClass" version="0.2">
+      <class_struct cname="ClutterGroupClass" version="0.1">
         <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
           <warning>missing glib:type-name</warning>
         </field>
@@ -6107,16 +6099,8 @@
         <return-type type="ClutterStage*"/>
         <parameters/>
       </method>
-      <method name="GetProductId" cname="clutter_input_device_get_product_id" version="1.22">
-        <return-type type="const-gchar*"/>
-        <parameters/>
-      </method>
       <method name="GetSlaveDevices" cname="clutter_input_device_get_slave_devices" version="1.6">
         <return-type type="GList*" element_type="ClutterInputDevice*" elements_owned="true"/>
-        <parameters/>
-      </method>
-      <method name="GetVendorId" cname="clutter_input_device_get_vendor_id" version="1.22">
-        <return-type type="const-gchar*"/>
         <parameters/>
       </method>
       <method name="Grab" cname="clutter_input_device_grab" version="1.10">
@@ -6191,8 +6175,6 @@
       <property name="Id" cname="id" type="gint" readable="true" writeable="true" construct="false" construct-only="true" version="1.2"/>
       <property name="NAxes" cname="n-axes" type="guint" readable="true" writeable="false" construct="false" construct-only="false" version="1.6"/>
       <property name="Name" cname="name" type="gchar*" readable="true" writeable="true" construct="false" construct-only="true" version="1.2"/>
-      <property name="ProductId" cname="product-id" type="gchar*" readable="true" writeable="true" construct="false" construct-only="true" version="1.22"/>
-      <property name="VendorId" cname="vendor-id" type="gchar*" readable="true" writeable="true" construct="false" construct-only="true" version="1.22"/>
     </object>
     <object name="Interval" cname="ClutterInterval" opaque="false" hidden="false" parent="GInitiallyUnowned" version="1.0">
       <implements>
@@ -7457,7 +7439,7 @@
         <warning>missing glib:type-name</warning>
       </field>
     </struct>
-    <struct name="ParamSpecFixed" cname="ClutterParamSpecFixed" opaque="true" hidden="false" parent="GParam" version="0.8" deprecated="true" deprecated-version="1.10">
+    <struct name="ParamSpecFixed" cname="ClutterParamSpecFixed" opaque="true" hidden="false" parent="GParam" version="0.8" deprecated="true">
       <method name="GetType" cname="clutter_param_fixed_get_type" shared="true">
         <return-type type="GType"/>
       </method>
@@ -7735,14 +7717,14 @@
         <warning>missing glib:type-name</warning>
       </field>
     </object>
-    <object name="Rectangle" cname="ClutterRectangle" opaque="false" hidden="false" parent="ClutterActor" version="0.2">
+    <object name="Rectangle" cname="ClutterRectangle" opaque="false" hidden="false" parent="ClutterActor" version="0.1">
       <implements>
         <interface cname="AtkImplementorIface"/>
         <interface cname="ClutterAnimatable"/>
         <interface cname="ClutterContainer"/>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterRectangleClass" version="0.2">
+      <class_struct cname="ClutterRectangleClass" version="0.1">
         <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
           <warning>missing glib:type-name</warning>
         </field>
@@ -7766,15 +7748,15 @@
       <method name="GetType" cname="clutter_rectangle_get_type" shared="true">
         <return-type type="GType"/>
       </method>
-      <constructor cname="clutter_rectangle_new" disable_void_ctor="" deprecated="true" deprecated-version="1.10"/>
-      <constructor cname="clutter_rectangle_new_with_color" deprecated="true" deprecated-version="1.10">
+      <constructor cname="clutter_rectangle_new" disable_void_ctor=""/>
+      <constructor cname="clutter_rectangle_new_with_color">
         <parameters>
           <parameter name="color" type="ClutterColor*">
             <warning>missing glib:type-name</warning>
           </parameter>
         </parameters>
       </constructor>
-      <method name="GetBorderColor" cname="clutter_rectangle_get_border_color" version="0.2" deprecated="true" deprecated-version="1.10">
+      <method name="GetBorderColor" cname="clutter_rectangle_get_border_color" version="0.2">
         <return-type type="void"/>
         <parameters>
           <parameter name="color" type="ClutterColor*" pass_as="out">
@@ -7782,11 +7764,11 @@
           </parameter>
         </parameters>
       </method>
-      <method name="GetBorderWidth" cname="clutter_rectangle_get_border_width" version="0.2" deprecated="true" deprecated-version="1.10">
+      <method name="GetBorderWidth" cname="clutter_rectangle_get_border_width" version="0.2">
         <return-type type="guint"/>
         <parameters/>
       </method>
-      <method name="GetColor" cname="clutter_rectangle_get_color" deprecated="true" deprecated-version="1.10">
+      <method name="GetColor" cname="clutter_rectangle_get_color">
         <return-type type="void"/>
         <parameters>
           <parameter name="color" type="ClutterColor*" pass_as="out">
@@ -7794,7 +7776,7 @@
           </parameter>
         </parameters>
       </method>
-      <method name="SetBorderColor" cname="clutter_rectangle_set_border_color" deprecated="true" deprecated-version="1.10">
+      <method name="SetBorderColor" cname="clutter_rectangle_set_border_color">
         <return-type type="void"/>
         <parameters>
           <parameter name="color" type="ClutterColor*">
@@ -7802,13 +7784,13 @@
           </parameter>
         </parameters>
       </method>
-      <method name="SetBorderWidth" cname="clutter_rectangle_set_border_width" version="0.2" deprecated="true" deprecated-version="1.10">
+      <method name="SetBorderWidth" cname="clutter_rectangle_set_border_width" version="0.2">
         <return-type type="void"/>
         <parameters>
           <parameter name="width" type="guint"/>
         </parameters>
       </method>
-      <method name="SetColor" cname="clutter_rectangle_set_color" deprecated="true" deprecated-version="1.10">
+      <method name="SetColor" cname="clutter_rectangle_set_color">
         <return-type type="void"/>
         <parameters>
           <parameter name="color" type="ClutterColor*">
@@ -8108,7 +8090,7 @@
           <parameter name="type_name" type="const-gchar*"/>
         </parameters>
       </method>
-      <method name="ListObjects" cname="clutter_script_list_objects" version="0.8">
+      <method name="ListObjects" cname="clutter_script_list_objects" version="0.8.2">
         <return-type type="GList*" element_type="GObject*" elements_owned="true"/>
         <parameters/>
       </method>
@@ -8454,14 +8436,14 @@
       <property name="Source" cname="source" type="ClutterActor*" readable="true" writeable="true" construct="true" construct-only="false" version="1.6"/>
       <property name="ToEdge" cname="to-edge" type="ClutterSnapEdge" readable="true" writeable="true" construct="true" construct-only="false" version="1.6"/>
     </object>
-    <object name="Stage" cname="ClutterStage" opaque="false" hidden="false" parent="ClutterGroup" version="0.2">
+    <object name="Stage" cname="ClutterStage" opaque="false" hidden="false" parent="ClutterGroup" version="0.1">
       <implements>
         <interface cname="AtkImplementorIface"/>
         <interface cname="ClutterAnimatable"/>
         <interface cname="ClutterContainer"/>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterStageClass" version="0.2">
+      <class_struct cname="ClutterStageClass" version="0.1">
         <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterGroupClass">
           <warning>missing glib:type-name</warning>
         </field>
@@ -8708,7 +8690,7 @@
       <property name="KeyFocus" cname="key-focus" type="ClutterActor*" readable="true" writeable="true" construct="false" construct-only="false" version="1.2"/>
       <property name="NoClearHint" cname="no-clear-hint" type="gboolean" readable="true" writeable="true" construct="false" construct-only="false" version="1.4"/>
       <property name="Offscreen" cname="offscreen" type="gboolean" readable="true" writeable="true" construct="false" construct-only="false" deprecated="true" deprecated-version="1.10"/>
-      <property name="Perspective" cname="perspective" type="ClutterPerspective*" readable="true" writeable="true" construct="false" construct-only="false" version="0.8"/>
+      <property name="Perspective" cname="perspective" type="ClutterPerspective*" readable="true" writeable="true" construct="false" construct-only="false" version="0.8.2"/>
       <property name="Title" cname="title" type="gchar*" readable="true" writeable="true" construct="false" construct-only="false" version="0.4"/>
       <property name="UseAlpha" cname="use-alpha" type="gboolean" readable="true" writeable="true" construct="false" construct-only="false" version="1.2"/>
       <property name="UseFog" cname="use-fog" type="gboolean" readable="true" writeable="true" construct="false" construct-only="false" version="0.6" deprecated="true" deprecated-version="1.10"/>
@@ -9853,14 +9835,14 @@
         </parameters>
       </constructor>
     </struct>
-    <object name="Texture" cname="ClutterTexture" opaque="false" hidden="false" parent="ClutterActor" version="0.2">
+    <object name="Texture" cname="ClutterTexture" opaque="false" hidden="false" parent="ClutterActor" version="0.1">
       <implements>
         <interface cname="AtkImplementorIface"/>
         <interface cname="ClutterAnimatable"/>
         <interface cname="ClutterContainer"/>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterTextureClass" version="0.2">
+      <class_struct cname="ClutterTextureClass" version="0.1">
         <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
           <warning>missing glib:type-name</warning>
         </field>
@@ -11084,7 +11066,7 @@
     <struct name="ActorPrivate" cname="ClutterActorPrivate" opaque="true" hidden="true"/>
     <struct name="AlphaPrivate" cname="ClutterAlphaPrivate" opaque="true" hidden="true"/>
     <struct name="AnimationPrivate" cname="ClutterAnimationPrivate" opaque="true" hidden="true"/>
-    <boxed name="AnimatorKey" cname="ClutterAnimatorKey" opaque="false" hidden="false" version="1.2" deprecated="true" deprecated-version="1.12">
+    <boxed name="AnimatorKey" cname="ClutterAnimatorKey" opaque="false" hidden="false" version="1.2">
       <method name="GetType" cname="clutter_animator_key_get_type" shared="true">
         <return-type type="GType"/>
       </method>
@@ -11162,7 +11144,7 @@
       <field cname="blue" access="public" writeable="true" readable="true" name="Blue" type="guint8"/>
       <field cname="alpha" access="public" writeable="true" readable="true" name="Alpha" type="guint8"/>
       <constructor cname="clutter_color_alloc" disable_void_ctor="" version="1.12"/>
-      <constructor cname="clutter_color_new" version="0.8">
+      <constructor cname="clutter_color_new" version="0.8.4">
         <parameters>
           <parameter name="red" type="guint8"/>
           <parameter name="green" type="guint8"/>
@@ -12193,13 +12175,13 @@
       <method name="EventsPending" cname="clutter_events_pending" shared="true" version="0.4">
         <return-type type="gboolean"/>
       </method>
-      <method name="FeatureAvailable" cname="clutter_feature_available" shared="true" version="0.2">
+      <method name="FeatureAvailable" cname="clutter_feature_available" shared="true" version="0.1.1">
         <return-type type="gboolean"/>
         <parameters>
           <parameter name="feature" type="ClutterFeatureFlags"/>
         </parameters>
       </method>
-      <method name="FeatureGetAll" cname="clutter_feature_get_all" shared="true" version="0.2">
+      <method name="FeatureGetAll" cname="clutter_feature_get_all" shared="true" version="0.1.1">
         <return-type type="ClutterFeatureFlags"/>
       </method>
       <method name="FrameSourceAddFull" cname="clutter_frame_source_add_full" shared="true" version="0.8" deprecated="true" deprecated-version="1.6">
@@ -12408,7 +12390,7 @@
       <method name="ShaderErrorQuark" cname="clutter_shader_error_quark" shared="true">
         <return-type type="guint32"/>
       </method>
-      <method name="TestAddDataFull" cname="clutter_test_add_data_full" shared="true" version="1.18">
+      <method name="TestAddDataFull" cname="clutter_test_add_data_full" shared="true">
         <return-type type="void"/>
         <parameters>
           <parameter name="test_path" type="const-gchar*"/>
@@ -12417,7 +12399,7 @@
           <parameter scope="async" name="test_notify" type="GDestroyNotify"/>
         </parameters>
       </method>
-      <method name="TestCheckActorAtPoint" cname="clutter_test_check_actor_at_point" shared="true" version="1.18">
+      <method name="TestCheckActorAtPoint" cname="clutter_test_check_actor_at_point" shared="true">
         <return-type type="gboolean"/>
         <parameters>
           <parameter name="stage" type="ClutterActor*"/>
@@ -12425,10 +12407,10 @@
             <warning>missing glib:type-name</warning>
           </parameter>
           <parameter name="actor" type="ClutterActor*"/>
-          <parameter name="_result" type="ClutterActor*" owned="true" pass_as="out"/>
+          <parameter name="_result" type="ClutterActor*"/>
         </parameters>
       </method>
-      <method name="TestCheckColorAtPoint" cname="clutter_test_check_color_at_point" shared="true" version="1.18">
+      <method name="TestCheckColorAtPoint" cname="clutter_test_check_color_at_point" shared="true">
         <return-type type="gboolean"/>
         <parameters>
           <parameter name="stage" type="ClutterActor*"/>
@@ -12438,13 +12420,10 @@
           <parameter name="color" type="ClutterColor*">
             <warning>missing glib:type-name</warning>
           </parameter>
-          <parameter name="_result" type="ClutterColor*" pass_as="out">
+          <parameter name="_result" type="ClutterColor*">
             <warning>missing glib:type-name</warning>
           </parameter>
         </parameters>
-      </method>
-      <method name="TestGetStage" cname="clutter_test_get_stage" shared="true" version="1.18">
-        <return-type type="ClutterActor*"/>
       </method>
       <method name="TestInit" cname="clutter_test_init" shared="true">
         <return-type type="void"/>
@@ -12453,7 +12432,7 @@
           <parameter name="argv" type="const-gchar*"/>
         </parameters>
       </method>
-      <method name="TestRun" cname="clutter_test_run" shared="true" version="1.18">
+      <method name="TestRun" cname="clutter_test_run" shared="true">
         <return-type type="gint"/>
       </method>
       <method name="TextureErrorQuark" cname="clutter_texture_error_quark" shared="true">
@@ -12616,7 +12595,7 @@
           </parameter>
         </parameters>
       </method>
-      <method name="ValueGetColor" cname="clutter_value_get_color" shared="true" version="0.8">
+      <method name="ValueGetColor" cname="clutter_value_get_color" shared="true" version="0.8.4">
         <return-type type="ClutterColor*">
           <warning>missing glib:type-name</warning>
         </return-type>
@@ -12671,7 +12650,7 @@
           </parameter>
         </parameters>
       </method>
-      <method name="ValueSetColor" cname="clutter_value_set_color" shared="true" version="0.8">
+      <method name="ValueSetColor" cname="clutter_value_set_color" shared="true" version="0.8.4">
         <return-type type="void"/>
         <parameters>
           <parameter name="value" type="GValue*">
@@ -12988,7 +12967,6 @@
       <constant value="269025175" ctype="gint" gtype="gint" name="AudioForward"/>
       <constant value="269025041" ctype="gint" gtype="gint" name="AudioLowerVolume"/>
       <constant value="269025074" ctype="gint" gtype="gint" name="AudioMedia"/>
-      <constant value="269025202" ctype="gint" gtype="gint" name="AudioMicMute"/>
       <constant value="269025042" ctype="gint" gtype="gint" name="AudioMute"/>
       <constant value="269025047" ctype="gint" gtype="gint" name="AudioNext"/>
       <constant value="269025073" ctype="gint" gtype="gint" name="AudioPause"/>
@@ -13502,6 +13480,7 @@
       <constant value="73" ctype="gint" gtype="gint" name="I"/>
       <constant value="gdk" ctype="gchar*" gtype="gchar*" name="INPUT_GDK"/>
       <constant value="null" ctype="gchar*" gtype="gchar*" name="INPUT_NULL"/>
+      <constant value="x11" ctype="gchar*" gtype="gchar*" name="INPUT_X11"/>
       <constant value="65075" ctype="gint" gtype="gint" name="ISO_Center_Object"/>
       <constant value="65072" ctype="gint" gtype="gint" name="ISO_Continuous_Underline"/>
       <constant value="65073" ctype="gint" gtype="gint" name="ISO_Discontinuous_Underline"/>
@@ -13802,7 +13781,6 @@
       <constant value="269025175" ctype="gint" gtype="gint" name="KEY_AudioForward"/>
       <constant value="269025041" ctype="gint" gtype="gint" name="KEY_AudioLowerVolume"/>
       <constant value="269025074" ctype="gint" gtype="gint" name="KEY_AudioMedia"/>
-      <constant value="269025202" ctype="gint" gtype="gint" name="KEY_AudioMicMute"/>
       <constant value="269025042" ctype="gint" gtype="gint" name="KEY_AudioMute"/>
       <constant value="269025047" ctype="gint" gtype="gint" name="KEY_AudioNext"/>
       <constant value="269025073" ctype="gint" gtype="gint" name="KEY_AudioPause"/>
@@ -15294,7 +15272,6 @@
       <constant value="65110" ctype="gint" gtype="gint" name="KEY_dead_abovedot"/>
       <constant value="65125" ctype="gint" gtype="gint" name="KEY_dead_abovereversedcomma"/>
       <constant value="65112" ctype="gint" gtype="gint" name="KEY_dead_abovering"/>
-      <constant value="65169" ctype="gint" gtype="gint" name="KEY_dead_aboveverticalline"/>
       <constant value="65105" ctype="gint" gtype="gint" name="KEY_dead_acute"/>
       <constant value="65131" ctype="gint" gtype="gint" name="KEY_dead_belowbreve"/>
       <constant value="65129" ctype="gint" gtype="gint" name="KEY_dead_belowcircumflex"/>
@@ -15304,7 +15281,6 @@
       <constant value="65128" ctype="gint" gtype="gint" name="KEY_dead_belowmacron"/>
       <constant value="65127" ctype="gint" gtype="gint" name="KEY_dead_belowring"/>
       <constant value="65130" ctype="gint" gtype="gint" name="KEY_dead_belowtilde"/>
-      <constant value="65170" ctype="gint" gtype="gint" name="KEY_dead_belowverticalline"/>
       <constant value="65109" ctype="gint" gtype="gint" name="KEY_dead_breve"/>
       <constant value="65163" ctype="gint" gtype="gint" name="KEY_dead_capital_schwa"/>
       <constant value="65114" ctype="gint" gtype="gint" name="KEY_dead_caron"/>
@@ -15323,8 +15299,6 @@
       <constant value="65156" ctype="gint" gtype="gint" name="KEY_dead_i"/>
       <constant value="65133" ctype="gint" gtype="gint" name="KEY_dead_invertedbreve"/>
       <constant value="65117" ctype="gint" gtype="gint" name="KEY_dead_iota"/>
-      <constant value="65171" ctype="gint" gtype="gint" name="KEY_dead_longsolidusoverlay"/>
-      <constant value="65168" ctype="gint" gtype="gint" name="KEY_dead_lowline"/>
       <constant value="65108" ctype="gint" gtype="gint" name="KEY_dead_macron"/>
       <constant value="65158" ctype="gint" gtype="gint" name="KEY_dead_o"/>
       <constant value="65116" ctype="gint" gtype="gint" name="KEY_dead_ogonek"/>
@@ -15921,7 +15895,7 @@
       <constant value="77" ctype="gint" gtype="gint" name="M"/>
       <constant value="1" ctype="gint" gtype="gint" name="MAJOR_VERSION"/>
       <constant value="3" ctype="gint" gtype="gint" name="MICRO_VERSION"/>
-      <constant value="22" ctype="gint" gtype="gint" name="MINOR_VERSION"/>
+      <constant value="20" ctype="gint" gtype="gint" name="MINOR_VERSION"/>
       <constant value="16784960" ctype="gint" gtype="gint" name="Mabovedot"/>
       <constant value="1717" ctype="gint" gtype="gint" name="Macedonia_DSE"/>
       <constant value="1714" ctype="gint" gtype="gint" name="Macedonia_GJE"/>
@@ -16371,15 +16345,17 @@
       <constant value="269025156" ctype="gint" gtype="gint" name="UserPB"/>
       <constant value="989" ctype="gint" gtype="gint" name="Utilde"/>
       <constant value="86" ctype="gint" gtype="gint" name="V"/>
-      <constant value="1.220000" ctype="gdouble" gtype="gdouble" name="VERSION"/>
+      <constant value="1.200000" ctype="gdouble" gtype="gdouble" name="VERSION"/>
       <constant value="0" ctype="gint" gtype="gint" name="VERSION_HEX"/>
-      <constant value="1.22.3" ctype="gchar*" gtype="gchar*" name="VERSION_S"/>
+      <constant value="1.20.3" ctype="gchar*" gtype="gchar*" name="VERSION_S"/>
       <constant value="269025076" ctype="gint" gtype="gint" name="VendorHome"/>
       <constant value="269025159" ctype="gint" gtype="gint" name="Video"/>
       <constant value="269025185" ctype="gint" gtype="gint" name="View"/>
       <constant value="16777215" ctype="gint" gtype="gint" name="VoidSymbol"/>
       <constant value="87" ctype="gint" gtype="gint" name="W"/>
       <constant value="gdk" ctype="gchar*" gtype="gchar*" name="WINDOWING_GDK"/>
+      <constant value="glx" ctype="gchar*" gtype="gchar*" name="WINDOWING_GLX"/>
+      <constant value="x11" ctype="gchar*" gtype="gchar*" name="WINDOWING_X11"/>
       <constant value="269025173" ctype="gint" gtype="gint" name="WLAN"/>
       <constant value="269025070" ctype="gint" gtype="gint" name="WWW"/>
       <constant value="16785026" ctype="gint" gtype="gint" name="Wacute"/>
@@ -16775,7 +16751,6 @@
       <constant value="65110" ctype="gint" gtype="gint" name="dead_abovedot"/>
       <constant value="65125" ctype="gint" gtype="gint" name="dead_abovereversedcomma"/>
       <constant value="65112" ctype="gint" gtype="gint" name="dead_abovering"/>
-      <constant value="65169" ctype="gint" gtype="gint" name="dead_aboveverticalline"/>
       <constant value="65105" ctype="gint" gtype="gint" name="dead_acute"/>
       <constant value="65131" ctype="gint" gtype="gint" name="dead_belowbreve"/>
       <constant value="65129" ctype="gint" gtype="gint" name="dead_belowcircumflex"/>
@@ -16785,7 +16760,6 @@
       <constant value="65128" ctype="gint" gtype="gint" name="dead_belowmacron"/>
       <constant value="65127" ctype="gint" gtype="gint" name="dead_belowring"/>
       <constant value="65130" ctype="gint" gtype="gint" name="dead_belowtilde"/>
-      <constant value="65170" ctype="gint" gtype="gint" name="dead_belowverticalline"/>
       <constant value="65109" ctype="gint" gtype="gint" name="dead_breve"/>
       <constant value="65163" ctype="gint" gtype="gint" name="dead_capital_schwa"/>
       <constant value="65114" ctype="gint" gtype="gint" name="dead_caron"/>
@@ -16804,8 +16778,6 @@
       <constant value="65156" ctype="gint" gtype="gint" name="dead_i"/>
       <constant value="65133" ctype="gint" gtype="gint" name="dead_invertedbreve"/>
       <constant value="65117" ctype="gint" gtype="gint" name="dead_iota"/>
-      <constant value="65171" ctype="gint" gtype="gint" name="dead_longsolidusoverlay"/>
-      <constant value="65168" ctype="gint" gtype="gint" name="dead_lowline"/>
       <constant value="65108" ctype="gint" gtype="gint" name="dead_macron"/>
       <constant value="65158" ctype="gint" gtype="gint" name="dead_o"/>
       <constant value="65116" ctype="gint" gtype="gint" name="dead_ogonek"/>
@@ -17742,7 +17714,7 @@
         <interface cname="ClutterContainer"/>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterTextureClass" version="0.2">
+      <class_struct cname="ClutterTextureClass" version="0.1">
         <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
           <warning>missing glib:type-name</warning>
         </field>
