@@ -33,6 +33,10 @@ namespace Clutter {
 
 	public partial struct Color {
 
+		public static Color New (float r, float g, float b, float a) {
+			return New ((byte)(r * 0xff), (byte)(g * 0xff), (byte)(b * 0xff), (byte)(a * 0xff));
+		}
+
 		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr clutter_color_alloc();
 
