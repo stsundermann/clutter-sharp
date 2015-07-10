@@ -49,5 +49,64 @@ namespace Clutter {
 			clutter_actor_get_allocation_vertices(Handle, ancestor == null ? IntPtr.Zero : ancestor.Handle, verts);
 			return verts;
 		}
+
+		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
+		static extern IntPtr clutter_actor_animatev(IntPtr raw, UIntPtr mode, uint duration, int n_properties, IntPtr[] properties, GLib.Value[] values);
+
+		[Obsolete]
+		public Clutter.Animation Animatev(ulong mode, uint duration, string[] properties, GLib.Value[] values) {
+			int cnt_properties = properties == null ? 0 : properties.Length;
+			IntPtr[] native_properties = new IntPtr [cnt_properties];
+			for (int i = 0; i < cnt_properties; i++)
+				native_properties [i] = GLib.Marshaller.StringToPtrGStrdup (properties[i]);
+			int cnt_values = values == null ? 0 : values.Length;
+			IntPtr raw_ret = clutter_actor_animatev(Handle, new UIntPtr (mode), duration, (properties == null ? 0 : properties.Length), native_properties, values);
+			Clutter.Animation ret = GLib.Object.GetObject(raw_ret) as Clutter.Animation;
+			for (int i = 0; i < native_properties.Length; i++) {
+				properties [i] = GLib.Marshaller.Utf8PtrToString (native_properties[i]);
+				GLib.Marshaller.Free (native_properties[i]);
+			}
+			return ret;
+		}
+
+
+		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
+		static extern IntPtr clutter_actor_animate_with_alphav(IntPtr raw, IntPtr alpha, int n_properties, IntPtr[] properties, GLib.Value[] values);
+
+		[Obsolete]
+		public Clutter.Animation AnimateWithAlphav(Clutter.Alpha alpha, string[] properties, GLib.Value[] values) {
+			int cnt_properties = properties == null ? 0 : properties.Length;
+			IntPtr[] native_properties = new IntPtr [cnt_properties];
+			for (int i = 0; i < cnt_properties; i++)
+				native_properties [i] = GLib.Marshaller.StringToPtrGStrdup (properties[i]);
+			int cnt_values = values == null ? 0 : values.Length;
+			IntPtr raw_ret = clutter_actor_animate_with_alphav(Handle, alpha == null ? IntPtr.Zero : alpha.Handle, (properties == null ? 0 : properties.Length), native_properties, values);
+			Clutter.Animation ret = GLib.Object.GetObject(raw_ret) as Clutter.Animation;
+			for (int i = 0; i < native_properties.Length; i++) {
+				properties [i] = GLib.Marshaller.Utf8PtrToString (native_properties[i]);
+				GLib.Marshaller.Free (native_properties[i]);
+			}
+			return ret;
+		}
+
+		[DllImport("clutter-1.0", CallingConvention = CallingConvention.Cdecl)]
+		static extern IntPtr clutter_actor_animate_with_timelinev(IntPtr raw, UIntPtr mode, IntPtr timeline, int n_properties, IntPtr[] properties, GLib.Value[] values);
+
+		[Obsolete]
+		public Clutter.Animation AnimateWithTimelinev(ulong mode, Clutter.Timeline timeline, string[] properties, GLib.Value[] values) {
+			int cnt_properties = properties == null ? 0 : properties.Length;
+			IntPtr[] native_properties = new IntPtr [cnt_properties];
+			for (int i = 0; i < cnt_properties; i++)
+				native_properties [i] = GLib.Marshaller.StringToPtrGStrdup (properties[i]);
+			int cnt_values = values == null ? 0 : values.Length;
+			IntPtr raw_ret = clutter_actor_animate_with_timelinev(Handle, new UIntPtr (mode), timeline == null ? IntPtr.Zero : timeline.Handle, (properties == null ? 0 : properties.Length), native_properties, values);
+			Clutter.Animation ret = GLib.Object.GetObject(raw_ret) as Clutter.Animation;
+			for (int i = 0; i < native_properties.Length; i++) {
+				properties [i] = GLib.Marshaller.Utf8PtrToString (native_properties[i]);
+				GLib.Marshaller.Free (native_properties[i]);
+			}
+			return ret;
+		}
+
 	}
 }

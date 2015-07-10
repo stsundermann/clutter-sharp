@@ -26,6 +26,9 @@
     <remove-node path="/api/namespace/object[@cname='ClutterBackend']/method[@name='SetFontOptions']"/>
     <!-- Some broken methods -->
     <attr path="//method[@cname='clutter_init']" name="hidden">true</attr>
+    <attr path="//method[@cname='clutter_actor_animatev']" name="hidden">true</attr>
+    <attr path="//method[@cname='clutter_actor_animate_with_alphav']" name="hidden">true</attr>
+    <attr path="//method[@cname='clutter_actor_animate_with_timelinev']" name="hidden">true</attr>
     <!-- Remove overloads -->
     <remove-attr path="//method[@cname='clutter_actor_apply_relative_transform_to_point']/parameters/parameter" name="allow-none"/>
     <remove-attr path="//method[@cname='clutter_units_from_em_for_font']/parameters/parameter" name="allow-none"/>
