@@ -35,7 +35,7 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 
 generated-stamp: $(API)
 	rm -rf generated/* && \
-	$(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GTK_SHARP_CFLAGS) $(COGLSHARP_CFLAGS) $(GSTREAMERSHARP_CFLAGS)-I cairo-api.xml \
+	$(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GTK_SHARP_CFLAGS) $(COGLSHARP_CFLAGS) $(GSTREAMERSHARP_CFLAGS) -I cairo-api.xml \
 		--outdir=generated \
 		--glue-filename=$(GLUEDIR)/generated.c --gluelib-name=libcluttersharpglue-1.18.0.so \
 		--glue-includes=clutter/clutter.h,clutter-gst/clutter-gst.h,clutter-gtk/clutter-gtk.h --gapidir=$(gapidir) \
