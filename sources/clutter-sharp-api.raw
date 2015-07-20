@@ -1245,17 +1245,6 @@
         <method signal_vm="touch_event"/>
         <field cname="_padding_dummy" access="private" writeable="false" readable="false" name="_paddingPaddingDummy" type="gpointer" array="true" array_len="26"/>
       </class_struct>
-      <class_struct cname="GtkClutterActorClass">
-        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
-          <warning>missing glib:type-name</warning>
-        </field>
-        <method vm="_clutter_gtk_reserved1"/>
-        <method vm="_clutter_gtk_reserved2"/>
-        <method vm="_clutter_gtk_reserved3"/>
-        <method vm="_clutter_gtk_reserved4"/>
-        <method vm="_clutter_gtk_reserved5"/>
-        <method vm="_clutter_gtk_reserved6"/>
-      </class_struct>
       <virtual_method name="_clutterClutterGtkReserved1" cname="_clutter_gtk_reserved1" shared="true" hidden="true">
         <return-type type="void"/>
       </virtual_method>
@@ -17297,46 +17286,16 @@
         <interface cname="ClutterContainer"/>
         <interface cname="ClutterScriptable"/>
       </implements>
-      <class_struct cname="ClutterActorClass">
-        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="GInitiallyUnownedClass">
+      <class_struct cname="GtkClutterActorClass">
+        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
           <warning>missing glib:type-name</warning>
         </field>
-        <method vm="show"/>
-        <method vm="show_all"/>
-        <method vm="hide"/>
-        <method vm="hide_all"/>
-        <method vm="realize"/>
-        <method vm="unrealize"/>
-        <method vm="map"/>
-        <method vm="unmap"/>
-        <method vm="paint"/>
-        <method vm="parent_set"/>
-        <method vm="destroy"/>
-        <method vm="pick"/>
-        <method vm="queue_redraw"/>
-        <method vm="get_preferred_width"/>
-        <method vm="get_preferred_height"/>
-        <method vm="allocate"/>
-        <method vm="apply_transform"/>
-        <method vm="event"/>
-        <method vm="button_press_event"/>
-        <method vm="button_release_event"/>
-        <method vm="scroll_event"/>
-        <method vm="key_press_event"/>
-        <method vm="key_release_event"/>
-        <method vm="motion_event"/>
-        <method vm="enter_event"/>
-        <method vm="leave_event"/>
-        <method vm="captured_event"/>
-        <method vm="key_focus_in"/>
-        <method vm="key_focus_out"/>
-        <method vm="queue_relayout"/>
-        <method vm="get_accessible"/>
-        <method vm="get_paint_volume"/>
-        <method vm="has_overlaps"/>
-        <method vm="paint_node"/>
-        <method vm="touch_event"/>
-        <field cname="_padding_dummy" access="private" writeable="false" readable="false" name="_paddingPaddingDummy" type="gpointer" array="true" array_len="26"/>
+        <method vm="_clutter_gtk_reserved1"/>
+        <method vm="_clutter_gtk_reserved2"/>
+        <method vm="_clutter_gtk_reserved3"/>
+        <method vm="_clutter_gtk_reserved4"/>
+        <method vm="_clutter_gtk_reserved5"/>
+        <method vm="_clutter_gtk_reserved6"/>
       </class_struct>
       <virtual_method name="Show" cname="show" shared="true">
         <return-type type="void"/>
@@ -17597,17 +17556,6 @@
           </parameter>
         </parameters>
       </virtual_method>
-      <class_struct cname="GtkClutterActorClass">
-        <field cname="parent_class" access="private" writeable="false" readable="false" name="ParentClass" type="ClutterActorClass">
-          <warning>missing glib:type-name</warning>
-        </field>
-        <method vm="_clutter_gtk_reserved1"/>
-        <method vm="_clutter_gtk_reserved2"/>
-        <method vm="_clutter_gtk_reserved3"/>
-        <method vm="_clutter_gtk_reserved4"/>
-        <method vm="_clutter_gtk_reserved5"/>
-        <method vm="_clutter_gtk_reserved6"/>
-      </class_struct>
       <virtual_method name="_clutterClutterGtkReserved1" cname="_clutter_gtk_reserved1" shared="true" hidden="true">
         <return-type type="void"/>
       </virtual_method>
